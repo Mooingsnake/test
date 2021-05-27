@@ -12,12 +12,13 @@ public class TactisCamera : MonoBehaviour
 
   [SerializeField]private float minFov = 80f;
   [SerializeField]private float maxFov = 140f;
-  [SerializeField]private float sentivity= 100f;
+  [SerializeField]private float sentivity= 300f;
   [SerializeField]private float fov;
+
+  [SerializeField]private Vector3 standardPos = new Vector3(-0.2f,4.9f,-1.2f);//(realtive pos between default character and camera)
   //follow the mousePosition,when out of screen
   void FixedUpdate ()
-    {
-      //controll transform
+    {      //controll transform
       float mouseX = Input.mousePosition.x;
       float mouseZ = Input.mousePosition.y;
       Rect screenRect = new Rect(0,0, Screen.width, Screen.height);
@@ -34,6 +35,12 @@ public class TactisCamera : MonoBehaviour
       fov+= Input.GetAxis("Mouse ScrollWheel") * sentivity;
       fov = Mathf.Clamp(fov, minFov,maxFov);
       Camera.main.fieldOfView = fov;
+
+      //come back to active character's pos by  mouse right
+      if (Input.GetMouseButtonUp(1)) {
+      //  gameObject.transform.position  = GameObject.Find("Map").GetComponent<MapGenerator>().activeCharacter.transform.position+standardPos;
+      }
+
 
   }
 

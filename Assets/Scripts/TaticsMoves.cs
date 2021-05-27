@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class TaticsMoves : MonoBehaviour
 {
+  //Debug:
+
+
+
     //Move and compute selectableTiles
     public int moveAbility = 5; //range of move
 
@@ -21,6 +25,7 @@ public class TaticsMoves : MonoBehaviour
 
     //controll the character
     private CharacterController controller;
+    private Vector3 halfExtents;
     //animator
     private Animator animator;
 
@@ -31,7 +36,7 @@ public class TaticsMoves : MonoBehaviour
     [SerializeField]private float gravity = -9.81f;
 
     //jump
-    [SerializeField]private float jumpHeight = 2; //y axis
+    [SerializeField]private float jumpHeight = 1f; //y axis ;1 per tile
 
     //cache the height,
     // tiles List
@@ -39,12 +44,13 @@ public class TaticsMoves : MonoBehaviour
     //combine CharacterController,Animator
     protected void Init()
      {
-       halfHeight = GetComponent<Collider>().bounds.extents.y;
+       halfHeight = GetComponent<Collider>().bounds.extents.y *0.5f;
        characterOffset = new Vector3(0,halfHeight,0);
        tiles =  GameObject.FindGameObjectsWithTag("Tile");
        FindCurrentTile();
        controller = GetComponent<CharacterController>();
        animator = GetComponentInChildren<Animator>();
+       halfExtents = new Vector3(halfHeight,halfHeight,halfHeight);
      }
 
      public void FindCurrentTile()
@@ -68,6 +74,7 @@ public class TaticsMoves : MonoBehaviour
      {
        RaycastHit hit;
        Tile tile = null;
+      // target.transform.position + characterOffset = (0,2,0)
        if (Physics.Raycast(target.transform.position + characterOffset , -Vector3.up, out hit))
        // to avoid cast itself
        {
@@ -121,15 +128,10 @@ public class TaticsMoves : MonoBehaviour
      public void MoveBack(){
 
      }
-
      //press WASD to Move,limit the range ,jump if need ,
      public void Move(){
        //gravity
        isGrounded = Physics.CheckSphere(transform.position, grounfCheckDistance);//(position,radius,masklayer)
-       // if (isGrounded && velocity.y < 0) {//stop falling when grounded
-       //   velocity.y = 0;
-       // }
-
        // 平移
        float moveZ = Input.GetAxis("Vertical");//-1 0 1
        float moveX = Input.GetAxis("Horizontal");//-1 0 1
@@ -138,50 +140,64 @@ public class TaticsMoves : MonoBehaviour
         // turn
         Vector3 headDirection = Vector3.RotateTowards(transform.forward, direction, 7*Time.deltaTime, 0.0f);
        transform.rotation = Quaternion.LookRotation(headDirection);//headDirection 水平朝向
-            //  Debug.Log(isGrounded);
+       //apply
        if (isGrounded) {
          yVelocity.y = 0;
          if (direction != Vector3.zero)
          {
-          // Debug.Log("run");
            Run();
          }else
          {
            Idle();
-           moving = false;
          }
-       }else{
+       }else
+       {
            yVelocity.y += gravity * Time.deltaTime; //v = 1/2 g t^2
        }
-      Vector3 heading  = new Vector3(direction.x*runSpeed,yVelocity.y,direction.z*runSpeed);
-  //      controller.Move(direction * Time.deltaTime);
-    //    if (isGrounded ) {//stop falling when grounded
-    // //     velocity.y = 0;
-    //    }else{
-    //       // velocity.y += gravity * Time.deltaTime; //v = 1/2 g t^2
-    //    }
+        Vector3 heading  = new Vector3(direction.x*runSpeed,yVelocity.y,direction.z*runSpeed);
         controller.Move(heading * Time.deltaTime);
      }
 
-     //including animation,and controller.move
+     //including run animation,and move limitation ,and jump animation
      public void Run()
      {
-    //   Jump();if（colider a new collider on x,z axis）
       animator.SetBool("isRunning",true);
+      //   along the direction ,if you collide the right cube, you jump
       RaycastHit hit;
-      bool isOndirection = Physics.Raycast(transform.position + characterOffset , direction, out hit);
-      if(isOndirection&&Vector3.Distance(hit.collider.transform.position, transform.position)< 0.2f)//一个长方体，长宽高是halfextents*2)//collider from Horizontal
+      bool isOndirection = Physics.Raycast(transform.position, direction, out hit,2);
+      if (isOndirection) {
+        Debug.Log(hit.collider.transform.position+"hit.collider.transform.position");
+        Debug.Log(transform.position+"transform.position");
+      }
+      if(isOndirection&&Vector3.Distance(hit.collider.transform.position, transform.position)< 2.1f)//一个长方体，长宽高是halfextents*2)//collider from Horizontal
       {
-        Jump();
+        if (hit.collider.GetComponent<Tile>().selectable) {
+          Jump();
+        }
+      }
+      //only walk on walkable tiles
+      Collider[] colliders  = Physics.OverlapBox(transform.position, halfExtents);
+      for(int i =0;i<colliders.Length;i++){
+        if(colliders[i].GetComponent<Tile>()!=null&&!colliders[i].GetComponent<Tile>().selectable)
+        {
+          Vector3 fenceScale = new Vector3(1f,20f,1f);
+          colliders[i].GetComponent<BoxCollider>().size =fenceScale ;
+        }
       }
      }
      public void Idle(){
+       // if (Condition) {//not on center of the tile
+       //   //step to the nearest tile center
+       // }
+       moving = false;
        animator.SetBool("isRunning",false);
        animator.SetBool("isJumping",false);
      }
      public void Jump()//s=sqrt(2gh)
      {
-        yVelocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
+       animator.SetBool("isRunning",false);
+       animator.SetBool("isJumping",true);
+        yVelocity.y = Mathf.Sqrt(jumpHeight * 2f * -2f * gravity);
      }
 
 

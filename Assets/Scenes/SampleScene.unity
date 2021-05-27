@@ -386,6 +386,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 9fee4d0b3c0f38946be0c1eeed35a5c9, type: 2}
     - target: {fileID: 9083323936475814867, guid: 1e811aa1573a1204196774238b36da7e, type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9083323936475814867, guid: 1e811aa1573a1204196774238b36da7e, type: 3}
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
@@ -616,6 +620,7 @@ MonoBehaviour:
   maxFov: 120
   sentivity: 10
   fov: 0
+  standardPos: {x: 0, y: 0, z: 0}
 --- !u!1 &1086829467
 GameObject:
   m_ObjectHideFlags: 0

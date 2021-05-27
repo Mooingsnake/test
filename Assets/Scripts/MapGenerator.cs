@@ -64,7 +64,7 @@ public class MapGenerator : MonoBehaviour
 
      public void GenerateCharacters()
      {
-       //needs to chanege when many roles loaded
+    //needs to change when many roles loaded
     //   initCharacters.add(GameObject.FindGameObjectWithTag("Jaye"));
        Vector3 pos = new Vector3(0.0f,1.00f,0.0f);
        foreach(GameObject character in initCharacters){
@@ -75,11 +75,10 @@ public class MapGenerator : MonoBehaviour
             controller.skinWidth = 0.0001f;
             new_character.AddComponent<PlayerMoves>();
             Destroy(character);
+            //after judge who is the fastest
+            activeCharacter =new_character;
             pos.z ++;
        }
 
-
-
-       //1.001 for raycast,see in TaticsMoves.cs
      }
 }

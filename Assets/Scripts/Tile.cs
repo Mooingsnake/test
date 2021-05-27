@@ -57,6 +57,7 @@ public class Tile : MonoBehaviour
         visited = false;
         parent = null;
         distance = 0;
+        gameObject.GetComponent<BoxCollider>().size =Vector3.one;
     }
 
     public void FindNeighbors(float jumpHeight)
