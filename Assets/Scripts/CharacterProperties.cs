@@ -27,18 +27,18 @@ JumpAbility（跳上/下多高）
 */
 public class CharacterProperties : MonoBehaviour
 {
-    [SerializeField]private int ch_Speed;
-    [SerializeField]private int ATK;
-    [SerializeField]private int DEF;
-    [SerializeField]private int HIT;
-    [SerializeField]private int HP;
-    [SerializeField]private int MP;
-    [SerializeField]private int AVD;
-    [SerializeField]private int MGK;
-    [SerializeField]private float RGS;
-    [SerializeField]private List<Vector3> weaponRange;//(1,0,0)
-    [SerializeField]private int MoveAbility;
-    [SerializeField]private int JumpAbility;
+    public int ch_Speed;
+    public int ATK;
+    public int DEF;
+    public int HIT;
+    public int HP;
+    public int MP;
+    public int AVD;
+    public int MGK;
+    public float RGS;
+    public int weaponRange;
+    public int MoveAbility;
+    public int JumpAbility;
 
     void Start()
     {

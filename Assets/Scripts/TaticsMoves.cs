@@ -1,24 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class TaticsMoves : MonoBehaviour
 {
   //Debug:
 
-
-
+    [SerializeField]private GameObject hitColliderZ;
+    [SerializeField]private GameObject hitColliderX;
+    //Ingnore:    这部分别动了，没啥看头的
+    private float runSpeed = 5;//调出来的通用移动速度，别改
+    private Vector3 characterOffset;//就用了一次，在TargetTile()
+    private float halfHeight = 0; //chche player'origin
     //Move and compute selectableTiles
     public int moveAbility = 5; //range of move
 
-    private float halfHeight = 0; //chche player'origin
-    private Vector3 characterOffset;
     public bool moving = false;//flag to show if tiles are change color
-    public Vector3 direction = new Vector3();//((x,x,x))   x=0, -1, 1
-    public Vector3 yVelocity = new Vector3(0,0,0);//direction * speed
-    [SerializeField] private float runSpeed = 5;
-    public Tile currentTile = null;//chache when FindSelectableTiles()
+    public Vector3 direction = new Vector3();//((x,x,x))   x=0, -1, 1 (turn and show animation)
+    public Vector3 velocity = new Vector3(0,0,0);//direction * speed (actually controller the transform)
 
+    public Tile currentTile = null;//chache when FindSelectableTiles()
     public Stack<Tile> path = new Stack<Tile>();
     public List<Tile> selectableTiles = new List<Tile>();
     public GameObject[] tiles = null;
@@ -36,7 +38,8 @@ public class TaticsMoves : MonoBehaviour
     [SerializeField]private float gravity = -9.81f;
 
     //jump
-    [SerializeField]private float jumpHeight = 1f; //y axis ;1 per tile
+    [SerializeField]private float jumpHeight = 2f; //y axis ;这是个单位，表示一个格子多高
+
 
     //cache the height,
     // tiles List
@@ -50,7 +53,8 @@ public class TaticsMoves : MonoBehaviour
        FindCurrentTile();
        controller = GetComponent<CharacterController>();
        animator = GetComponentInChildren<Animator>();
-       halfExtents = new Vector3(halfHeight,halfHeight,halfHeight);
+       jumpHeight *= GetComponent<CharacterProperties>().JumpAbility ;
+       halfExtents = new Vector3(jumpHeight,jumpHeight,jumpHeight);
      }
 
      public void FindCurrentTile()
@@ -126,79 +130,126 @@ public class TaticsMoves : MonoBehaviour
 
      //back to this turn's original place
      public void MoveBack(){
-
+       GameObject turnBaseManager = GameObject.Find("turnBaseManager");
+       TurnBaseController turnBaseCtl = turnBaseManager.GetComponent<TurnBaseController>();
+       gameObject.transform.position = turnBaseCtl.originalPos;
+       gameObject.transform.rotation = turnBaseCtl.originalRot;
      }
+
+     //in Update();
      //press WASD to Move,limit the range ,jump if need ,
      public void Move(){
        //gravity
        isGrounded = Physics.CheckSphere(transform.position, grounfCheckDistance);//(position,radius,masklayer)
-       // 平移
+        // 平移
        float moveZ = Input.GetAxis("Vertical");//-1 0 1
        float moveX = Input.GetAxis("Horizontal");//-1 0 1
        direction = new  Vector3(moveX,0,moveZ);//direction不包含垂直数值，因为之后还有水平面人物朝向问题
-       yVelocity = new Vector3(0,yVelocity.y,0);//velocity包含垂直数值和速度单位，垂直用g计算，水平用runspeed计算,是高中物理的向量概念
+       velocity = new Vector3(moveX,velocity.y,moveZ);//velocity包含垂直数值和速度单位，垂直用g计算，水平用runspeed计算,是高中物理的向量概念
         // turn
         Vector3 headDirection = Vector3.RotateTowards(transform.forward, direction, 7*Time.deltaTime, 0.0f);
        transform.rotation = Quaternion.LookRotation(headDirection);//headDirection 水平朝向
        //apply
        if (isGrounded) {
-         yVelocity.y = 0;
+         velocity.y = 0f;
          if (direction != Vector3.zero)
          {
-           Run();
+           Run();//including jumping
          }else
-         {
-           Idle();
+         {               //check if it's on center of one tile
+            RaycastHit hit;
+            Physics.Raycast(transform.position+Vector3.up*10f,-Vector3.up,out hit);
+             Tile tile = hit.collider.GetComponent<Tile>();
+            Vector3 posA= Projection(tile.transform.position);
+            Vector3 posB = Projection(transform.position);
+              if (Vector3.Distance(posA,posB)>0.1f) {
+                controller.Move((posA - posB) * Time.deltaTime*5.0f);
+              }
+               else{
+                 Idle();
+               }
          }
        }else
        {
-           yVelocity.y += gravity * Time.deltaTime; //v = 1/2 g t^2
+           velocity.y += gravity * Time.deltaTime; //v = 1/2 g t^2
        }
-        Vector3 heading  = new Vector3(direction.x*runSpeed,yVelocity.y,direction.z*runSpeed);
+        Vector3 heading  = new Vector3(velocity.x*runSpeed,velocity.y,velocity.z*runSpeed);
         controller.Move(heading * Time.deltaTime);
      }
 
+     //in Update();
      //including run animation,and move limitation ,and jump animation
      public void Run()
      {
+       //如果相安无事，就跑
       animator.SetBool("isRunning",true);
-      //   along the direction ,if you collide the right cube, you jump
+      animator.SetBool("isJumping",false);
       RaycastHit hit;
-      bool isOndirection = Physics.Raycast(transform.position, direction, out hit,2);
-      if (isOndirection) {
-        Debug.Log(hit.collider.transform.position+"hit.collider.transform.position");
-        Debug.Log(transform.position+"transform.position");
-      }
-      if(isOndirection&&Vector3.Distance(hit.collider.transform.position, transform.position)< 2.1f)//一个长方体，长宽高是halfextents*2)//collider from Horizontal
+      bool isOndirection = Physics.Raycast(transform.position, direction, out hit,2);//角色方向上有障碍物
+      //if(z,x分别能走){判断要不要跳}
+      //else{不能走}{分别置0}
+      //如果x轴能走
+      Vector3 barkout = transform.position+(NormalValueX(direction.x))+Vector3.up*10;
+      if(Physics.Raycast(transform.position+(NormalValueX(direction.x))+Vector3.up*10,-Vector3.up,out hit))
       {
-        if (hit.collider.GetComponent<Tile>().selectable) {
-          Jump();
+        bool whiteTileOnX = !hit.collider.GetComponent<Tile>().selectable;
+        if (whiteTileOnX) {//不能走，再看看z轴
+          velocity.x = 0;
+        }else{//能走，判断要不要跳
+          if(isOndirection&&Vector3.Distance(hit.collider.transform.position, transform.position+Vector3.up)< 2.1f)//一个长方体，长宽高是halfextents*2)//collider from Horizontal
+            {
+                Jump(Math.Abs(hit.collider.transform.position.y-transform.position.y)+1.6f);//deltaHeight between collider and transform
+            }
         }
       }
-      //only walk on walkable tiles
-      Collider[] colliders  = Physics.OverlapBox(transform.position, halfExtents);
-      for(int i =0;i<colliders.Length;i++){
-        if(colliders[i].GetComponent<Tile>()!=null&&!colliders[i].GetComponent<Tile>().selectable)
-        {
-          Vector3 fenceScale = new Vector3(1f,20f,1f);
-          colliders[i].GetComponent<BoxCollider>().size =fenceScale ;
+      //如果z能走
+       if(Physics.Raycast(transform.position+(NormalValueZ(direction.z))+Vector3.up*10,-Vector3.up,out hit))
+      {
+      //  Debug.Log("transform.position+(direction.z>0?Vector3.forward:-Vector3.forward)"+transform.position+(direction.z>0?Vector3.forward:-Vector3.forward));
+          bool whiteTileOnZ = !hit.collider.GetComponent<Tile>().selectable;
+        if (whiteTileOnZ) {//不能走，结束函数
+          velocity.z = 0;
+          return ;
+        }else{//能走,判断要不要跳
+          if(isOndirection&&Vector3.Distance(hit.collider.transform.position, transform.position+Vector3.up)< 2.1f)//一个长方体，长宽高是halfextents*2)//collider from Horizontal
+            {
+                Jump(Math.Abs(hit.collider.transform.position.y-transform.position.y)+1.6f);//deltaHeight between collider and transform
+            }
         }
       }
-     }
+   }
      public void Idle(){
-       // if (Condition) {//not on center of the tile
-       //   //step to the nearest tile center
-       // }
        moving = false;
        animator.SetBool("isRunning",false);
        animator.SetBool("isJumping",false);
      }
-     public void Jump()//s=sqrt(2gh)
+     public void Jump(float deltaHeight)//s=sqrt(2gh)
      {
        animator.SetBool("isRunning",false);
        animator.SetBool("isJumping",true);
-        yVelocity.y = Mathf.Sqrt(jumpHeight * 2f * -2f * gravity);
+        velocity.y = Mathf.Sqrt((deltaHeight)  * -2f * gravity);
      }
 
-
+     private Vector3 NormalValueX(float a){
+       if (a==0) {
+         return Vector3.zero;
+       }else if (a>0) {
+         return Vector3.right;
+       }else{
+         return Vector3.left;
+       }
+     }
+     private Vector3 NormalValueZ(float a){
+       if (a==0) {
+         return Vector3.zero;
+       }else if (a>0) {
+         return Vector3.forward;
+       }else{
+         return Vector3.back;
+       }
+     }
+     private Vector3 Projection(Vector3 vect3){
+       vect3.y = 0;
+       return vect3;
+     }
 }

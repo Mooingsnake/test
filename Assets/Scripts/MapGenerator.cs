@@ -19,6 +19,7 @@ public class MapGenerator : MonoBehaviour
     //ActiveCharacter,there is only one character activate in a moment
     //changes when its motion is over.
     public GameObject activeCharacter;
+    [SerializeField]private GameObject fastestCharacter;
     public List<GameObject> initCharacters = new List<GameObject>();
     [SerializeField]private Vector3 bornPos;//born position,different from every map;saved by a file
 
@@ -31,6 +32,7 @@ public class MapGenerator : MonoBehaviour
       GenerateMap();
       modeType = 2;//set to CursorMode first
       GenerateCharacters();
+      ActivateCharacter();
     }
 
 
@@ -40,7 +42,7 @@ public class MapGenerator : MonoBehaviour
     }
     public void GenerateMap()
      {
-        GameObject map =GameObject.Find("Map");
+        //GameObject map =GameObject.Find("Map");
        initTile = GameObject.FindGameObjectWithTag("Tile");
        Vector3 pos ;
        GameObject tile;
@@ -51,11 +53,11 @@ public class MapGenerator : MonoBehaviour
            if (x==4) {
              pos = new Vector3(x * tileOffset, tileOffset, y * tileOffset);
              tile =(GameObject)Instantiate(initTile, pos, Quaternion.identity);
-             tile.transform.parent = map.transform;
+             //tile.transform.parent = map.transform;
            }
            pos = new Vector3(x * tileOffset, 0, y * tileOffset);
            tile =(GameObject)Instantiate(initTile, pos, Quaternion.identity);
-              tile.transform.parent = map.transform;
+              //tile.transform.parent = map.transform;
 
          }
        }
@@ -67,6 +69,8 @@ public class MapGenerator : MonoBehaviour
     //needs to change when many roles loaded
     //   initCharacters.add(GameObject.FindGameObjectWithTag("Jaye"));
        Vector3 pos = new Vector3(0.0f,1.00f,0.0f);
+        float maxSpeed = 0f;
+
        foreach(GameObject character in initCharacters){
             GameObject new_character =(GameObject)Instantiate(character, pos, Quaternion.identity);
             new_character.AddComponent<CharacterController>();
@@ -76,9 +80,19 @@ public class MapGenerator : MonoBehaviour
             new_character.AddComponent<PlayerMoves>();
             Destroy(character);
             //after judge who is the fastest
-            activeCharacter =new_character;
-            pos.z ++;
+            pos.z +=2;//改成和tile对应是不是会比较好，tile抽象出来变成坐标，然后就只要对坐标操作就好
+            if (maxSpeed<new_character.GetComponent<CharacterProperties>().ch_Speed) {
+              maxSpeed = new_character.GetComponent<CharacterProperties>().ch_Speed;
+              fastestCharacter = new_character;
+            }
        }
 
+     }
+     public void ActivateCharacter()
+     {
+       //select the fastestCharacter to activate
+       activeCharacter = fastestCharacter;
+       PlayerMoves pm = activeCharacter.GetComponent<PlayerMoves>();
+       pm.activated = true;
      }
 }
