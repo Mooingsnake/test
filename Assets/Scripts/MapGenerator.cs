@@ -11,10 +11,7 @@ public class MapGenerator : MonoBehaviour
     public float tileOffset = 2.00f;
     public GameObject map;
 
-    //MoveMode & CursorMode
-    public int modeType;
-    [SerializeField] private const int MoveMode = 1;
-    [SerializeField] private const int CursorMode = 2;
+
 
     //ActiveCharacter,there is only one character activate in a moment
     //changes when its motion is over.
@@ -30,7 +27,6 @@ public class MapGenerator : MonoBehaviour
     void Start()
     {
       GenerateMap();
-      modeType = 2;//set to CursorMode first
       GenerateCharacters();
       ActivateCharacter();
     }
@@ -38,7 +34,7 @@ public class MapGenerator : MonoBehaviour
 
     void Update()
     {
-      //todo: switch the mode
+      
     }
     public void GenerateMap()
      {

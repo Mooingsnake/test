@@ -13,14 +13,14 @@ public class TaticsMoves : MonoBehaviour
     private float runSpeed = 5;//调出来的通用移动速度，别改
     private Vector3 characterOffset;//就用了一次，在TargetTile()
     private float halfHeight = 0; //chche player'origin
+    public  TurnBaseController turnBaseCtl;
     //Move and compute selectableTiles
-    public int moveAbility = 5; //range of move
-
+    public int moveAbility ; //range of move
     public bool moving = false;//flag to show if tiles are change color
     public Vector3 direction = new Vector3();//((x,x,x))   x=0, -1, 1 (turn and show animation)
     public Vector3 velocity = new Vector3(0,0,0);//direction * speed (actually controller the transform)
 
-    public Tile currentTile = null;//chache when FindSelectableTiles()
+    [SerializeField]private Tile currentTile = null;//chache when FindSelectableTiles()
     public Stack<Tile> path = new Stack<Tile>();
     public List<Tile> selectableTiles = new List<Tile>();
     public GameObject[] tiles = null;
@@ -54,7 +54,11 @@ public class TaticsMoves : MonoBehaviour
        controller = GetComponent<CharacterController>();
        animator = GetComponentInChildren<Animator>();
        jumpHeight *= GetComponent<CharacterProperties>().JumpAbility ;
+       moveAbility = GetComponent<CharacterProperties>().MoveAbility;
        halfExtents = new Vector3(jumpHeight,jumpHeight,jumpHeight);
+       GameObject turnBaseManager = GameObject.Find("TurnBaseManager");
+       turnBaseCtl = turnBaseManager.GetComponent<TurnBaseController>();
+
      }
 
      public void FindCurrentTile()
@@ -83,7 +87,6 @@ public class TaticsMoves : MonoBehaviour
        // to avoid cast itself
        {
          tile = hit.collider.GetComponent<Tile>();
-
        }
        return tile;
      }
@@ -130,8 +133,6 @@ public class TaticsMoves : MonoBehaviour
 
      //back to this turn's original place
      public void MoveBack(){
-       GameObject turnBaseManager = GameObject.Find("turnBaseManager");
-       TurnBaseController turnBaseCtl = turnBaseManager.GetComponent<TurnBaseController>();
        gameObject.transform.position = turnBaseCtl.originalPos;
        gameObject.transform.rotation = turnBaseCtl.originalRot;
      }
@@ -201,7 +202,7 @@ public class TaticsMoves : MonoBehaviour
                 Jump(Math.Abs(hit.collider.transform.position.y-transform.position.y)+1.6f);//deltaHeight between collider and transform
             }
         }
-      }
+      }else{velocity.x = 0;}
       //如果z能走
        if(Physics.Raycast(transform.position+(NormalValueZ(direction.z))+Vector3.up*10,-Vector3.up,out hit))
       {
@@ -216,7 +217,7 @@ public class TaticsMoves : MonoBehaviour
                 Jump(Math.Abs(hit.collider.transform.position.y-transform.position.y)+1.6f);//deltaHeight between collider and transform
             }
         }
-      }
+      }else{  velocity.z = 0;}
    }
      public void Idle(){
        moving = false;
