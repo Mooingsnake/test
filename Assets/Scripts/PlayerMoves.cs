@@ -36,21 +36,21 @@ public class PlayerMoves : TaticsMoves
     }
     public void CheckInput()//listening for an input "B"means to CursorMode,"A" means confirm to set and begin to attack or other
     {
-     if(Input.GetKeyUp(KeyCode.A)){// go to confirm mode
-        //confirm movement.set activated false, begin to attack/drink potions
-        turnBaseCtl.modeType = TurnBaseController.CombatMode;
-        flag = false;
-        activated = false;//reboot after CombatMode is over,and set true in TurnBaseController.cs
-     }
-     if (Input.GetKeyUp(KeyCode.B)) {//go to cursor mode.
-        flag = false;
-        activated = false;
-        turnBaseCtl.modeType = TurnBaseController.CursorMode;
-      //  go to cursor mode.
-     }
-      if(Input.GetKeyUp(KeyCode.Y)){   //  MoveBack();
-        MoveBack();
-      }
+     // if(Input.GetKeyUp(KeyCode.A)){// go to confirm mode
+     //    //confirm movement.set activated false, begin to attack/drink potions
+     //    turnBaseCtl.modeType = TurnBaseController.CombatMode;
+     //    flag = false;
+     //    activated = false;//reboot after CombatMode is over,and set true in TurnBaseController.cs
+     // }
+     // if (Input.GetKeyUp(KeyCode.B)) {//go to cursor mode.
+     //    flag = false;
+     //    activated = false;
+     //    turnBaseCtl.modeType = TurnBaseController.CursorMode;
+     //  //  go to cursor mode.
+     // }
+     //  if(Input.GetKeyUp(KeyCode.Y)){   //  MoveBack();
+     //    MoveBack();
+     //  }
       if (Input.GetAxis("Vertical")!=0 ||Input.GetAxis("Horizontal") != 0) {
               moving = true;
       }
