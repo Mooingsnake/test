@@ -11,7 +11,7 @@ public class PlayerMoves : TaticsMoves
 {
     public  bool activated = false;//only  activated one can move in one turn
     private bool flag = false;
-    private TurnBaseController turnBaseCtl;
+
     void Start()
     {
       Init();

@@ -17,32 +17,42 @@ public class Tile : MonoBehaviour
     public int distance = 0;
 
     public Collider[] colliders ;
+    public Material planeMat;
 
     void Start()
     {
-      // gameObject.AddComponent<Rigidbody>();
-      // Rigidbody rigidbody = GetComponent<Rigidbody>();
-      // rigidbody.useGravity = false;
+        // gameObject.AddComponent<Rigidbody>();
+        // Rigidbody rigidbody = GetComponent<Rigidbody>();
+        // rigidbody.useGravity = false;
+          var re = gameObject.GetComponentsInChildren<MeshRenderer>();
+            foreach(MeshRenderer render in re)
+        {
+            if (render.materials[0].HasProperty("_ModeType"))
+            {
+                planeMat = render.materials[0];
+                return;
+            }
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+
         if (current)
         {
-            GetComponent<Renderer>().material.color = Color.magenta;
-        }
-        else if (target)
-        {
-            GetComponent<Renderer>().material.color = Color.green;
+            //   GetComponent<Renderer>().material.color = Color.magenta;
+             planeMat.SetFloat("_IsCurrent", 1.0f);
         }
         else if (selectable)
          {
-          GetComponent<Renderer>().material.color = Color.red;
+            // GetComponent<Renderer>().material.color = Color.red;
+             planeMat.SetFloat("_IsSelectable", 1.0f);
         }
         else
         {
-          GetComponent<Renderer>().material.color = Color.white;
+            // GetComponent<Renderer>().material.color = Color.white;
+            // planeMat.SetColor("_TileColor", Color.clear);
         }
     }
     //Reset the tile to default state

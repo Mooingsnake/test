@@ -15,6 +15,7 @@ public class TaticsMoves : MonoBehaviour
     private float halfHeight = 0; //chche player'origin
     public  TurnBaseController turnBaseCtl;
     //Move and compute selectableTiles
+    [Header("Move and selectableTiles")]
     public int moveAbility ; //range of move
     public bool moving = false;//flag to show if tiles are change color
     public Vector3 direction = new Vector3();//((x,x,x))   x=0, -1, 1 (turn and show animation)
@@ -32,6 +33,7 @@ public class TaticsMoves : MonoBehaviour
     private Animator animator;
 
     //gravity
+    [Header("gravity")]
     [SerializeField]private bool isGrounded;
     [SerializeField]private float grounfCheckDistance = 0.2f;
     [SerializeField]private LayerMask groundMask = 2;

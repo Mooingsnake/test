@@ -1,4 +1,5 @@
 /*
+[一、 basic, blend,_Time,简单的纹理样式]
 你好，这里是一个shader基础教程的笔记本，在项目中长久存在但其实是个独立的笔记，没有工程作用
 我强推油管的姐姐！https://www.youtube.com/watch?v=kfM-yu0iQBk 这是那个网址
 知识点如下：
@@ -22,7 +23,66 @@
 14.【没有悬崖边界的渐变】可以使用cos，也可以使用abs，具体方法自己想，借助一下数学工具
 15.subshader 有自己的tags ，pass也有自己的tags
 16.CGPROGRAM 和ENDCG 包裹了hlsl部分，之外的部分都是unity的封装
-17:2::19::46
+17:斜向纹理float color = cos((i.uv1.y +  i.uv1.x )* 25) * 0.5 + 0.5;//返回t的小数部分
+18.z形纹理 float color = cos((offset +  i.uv1.x )* 25) * 0.5 + 0.5;    float offset = cos(i.uv1.y * 25) *0.01 + 0.01;
+19.unity 提供了一个全局变量_Time。_Time.y表示秒数，.w表示second/20，可以通过引用决定时间变化快慢
+20.如果想在Sence界面查看动画，记得去勾选always refresh ，在Sence和pLAY下面有一个下拉菜单，里面有这个选项
+21.我们做一个渐变特效吧！
+22.
+                float xoffset = cos(i.uv1.y * 25) *0.01 + 0.01;
+                float t = cos((i.uv1.y + xoffset +  _Time.y * 0.2 )* 25 ) * 0.5 + 0.5;//返回t的小数部分
+                t *= 1 - i.uv1.y ;
+23.在blend阶段[一般而言也是最后的渲染步骤，也叫做additive blending]，frag函数return的color被叫做source color （src）
+   我们需要一个背景，作为render的 destination，也就是destination(dst)
+   additive blending  = src * A +/- dst * B;
+   additive blending 一般用在光特效
+   这个步骤并不在shader code里面，它在shaderlab里面，所以在CGPROGRAM的外面
+24.render queue 是一个很机械的队列，首先渲染skybox，然后geometry，然后所有的additive transparent，然后覆盖的overlays
+    比如flares
+25.要处理透明物体，就该把tags改成
+    "RenderType" = "Transparent"
+    "Queue" = "Transparent"
+26.zwrite off，ztest
+    详细可以搜索csdn也很详细，首先深度缓存存的是一个像素要绘制在屏幕上的深度值
+    如果zwrite on(默认值on)就启用这个缓存区，那么绘制前将会比较【当前处理的像素深度值】和【zbuffer里面的深度值】，浅的将会写入缓冲区
+    在zwrite和ztest之前，先把渲染队列中比较前的渲染了
+    ztest 就是启用深度测试，LEqual（默认）通过比较深度改写颜色 Off关闭深度测试 Always直接写进颜色缓冲区
+    Never不使用这个颜色，直接消失
+    如果这两个值都是默认值：ZWrite On ZTest LEqual那么可以见得
+    1.当ZWrite为On时，ZTest通过时，该像素的深度才能成功写入深度缓存，同时因为ZTest通过了，该像素的颜色值也会写入颜色缓存。
+    2.当ZWrite为On时，ZTest不通过时，该像素的深度不能成功写入深度缓存，同时因为ZTest不通过，该像素的颜色值不会写入颜色缓存。
+    3.当ZWrite为Off时，ZTest通过时，该像素的深度不能成功写入深度缓存，同时因为ZTest通过了，该像素的颜色值会写入颜色缓存。
+    4.当ZWrite为Off时，ZTest不通过时，该像素的深度不能成功写入深度缓存，同时因为ZTest不通过，该像素的颜色值不会写入颜色缓存。
+    ZTest GEqual 只渲染被挡住的部分（less Equal就是渲染挡住别人的部分）,很有用，一般有两个shader一个用来渲染挡住别人的时候，一个用来渲染被别人挡住的时候
+27.如何才能把半透明物体的背面也渲染出来？
+    其实一般而言物体背面之所以没有渲染是因为他们把背面删掉了。Cull Back是默认值，表示Back（背面）是被删掉（Cull）的
+28.RenderType 渲染管线中当前shader类型
+   Queue 改变渲染队列的顺序，一个transparent类型shader的将会在所有opaque不透明物体之后渲染
+29.怎么去掉上下两个面？
+    return t * (abs(i.normal.y) < 0.999);
+30.这次写个更好看的渐变透明shader
+                float xoffset = cos(i.uv1.y * 25) *0.01 + 0.01;
+                float t = cos((i.uv1.y + xoffset +  _Time.y * 0.2 )* 25 ) * 0.5 + 0.5;
+                t *= 1 - i.uv1.y ;
+
+                float4 topButtomRemover = (abs(i.normal.y) < 0.999);
+                float waves = t * topButtomRemover;
+                
+                float4 gradient = lerp(_ColorA, _ColorB, i.uv1.y);
+                return gradient * waves;//因为shader里面true false用了01表示所以可以这么做
+31.vertex offset
+    我们在vert函数里面做形变！
+      v.vertex.y = waves * _WaveAmp;
+    如何形成两个方向的波浪？
+      float waves = cos((v.uv0.y -  _Time.y * 0.1 )* 25 ) ;
+      float waves2 = cos((v.uv0.x -  _Time.y * 0.1 )* 25 ) ;
+      v.vertex.y = waves * waves2 * _WaveAmp;
+    中间来个点？
+      float2 uvsCentered = i.uv1 *2 - 1;
+      float radiaDistance = length(uvsCentered);
+      return float4(radiaDistance.xxx, 1);//因为shader里面true false用了01表示所以可以这么做
+    
+     
 */
 
 
@@ -35,16 +95,25 @@ Shader "Unlit/Shader1"
         _ColorA ("Color A" , Color) = (1, 1, 1, 1)
         _ColorB ("Color B" , Color) = (0, 0, 0, 0)//用 0 代替 (0, 0, 0, 0)是不可以的，shader properties对类型定义是死板的,但是在subshader的时候又允许float = float4，frag的rturn也可以把float当成（float ，float， float，float），真实迷惑
         _Scale ("UV Scale", Float) = 1  //_Scale 本文件内变量名， UV Scale 给unity editor的人看的名 ，Float 类型，1 默认值
-        _ColorStart ("Color Start", Range(0, 1)) = 1
-        _ColorEnd ("Color End", Range(0, 1)) = 0
+        _WaveAmp ("Wave Amplitude", Range(0, 1)) = 1
     }
     SubShader
     { 
-        Tags { "RenderType"="Opaque" }
+        Tags { 
+            "RenderType" = "Opaque" // 告诉渲染管线，这是个什么类型
+            // "RenderType" = "Transparent"
+            // "Queue" = "Transparent"
+        }
        // LOD 100 //不太重要，油管姐姐删掉了
 
         Pass
         {
+
+           // Blend DstColor Zero // [src * dst + dst * 0]
+           //  Blend One One
+           // ZWrite Off
+           // ZTest GEqual
+
             CGPROGRAM
             #pragma vertex vert //vertex shader在这里用vert函数表示，下面有对应函数
             #pragma fragment frag
@@ -57,10 +126,9 @@ Shader "Unlit/Shader1"
             float4 _MainTex_ST;
             float4 _Color;//这样一个被properties声明的变量，在vertex shader和fragment shader都能用，非常方便
             float _Scale;
-            float _ColorStart;
-            float _ColorEnd;
             float4 _ColorA;
             float4 _ColorB;
+            float _WaveAmp;
 
             struct MeshData // 姐姐觉得这个名字好！per-vertex mesh  data
             {
@@ -74,7 +142,7 @@ Shader "Unlit/Shader1"
 
             struct Interpolators // 从vertex shader 到 fragement shader，传递的数据，可以随便改名称，这里从v2f变成中间值
             {// 其实interpolator的含义是插值，从vertex到pixel之间确实是过渡插值的方法（类似alpha blend）
-                float3 normals : TEXCOORD0;// 姐姐说这个和uv channel没有关系，你随意,仅仅代表一个从vert到frag的数据流
+                float3 normal : TEXCOORD0;// 姐姐说这个和uv channel没有关系，你随意,仅仅代表一个从vert到frag的数据流
                 float2 uv1 :TEXCOORD1;// 这样也行
               //  UNITY_FOG_COORDS(1)//去掉，我们今天不管fog
                 float4 vertex : SV_POSITION; // clip space postion 裁剪空间坐标，视锥体剔除视野外的东西称之为裁剪，裁剪空间就是视锥体（能看到的）空间，这里是每个顶点的裁剪空间坐标
@@ -91,8 +159,15 @@ Shader "Unlit/Shader1"
             Interpolators vert (MeshData v)//这里也要改，vert 返回就是vertex shader的输出,v由unity自动填充
             {
                 Interpolators o;//output的意思
+
+                float waves = cos((v.uv0.y -  _Time.y * 0.1 )* 25 ) ;
+                float waves2 = cos((v.uv0.x -  _Time.y * 0.1 )* 25 ) ;
+
+               // v.vertex.y = waves * waves2 * _WaveAmp;
+
+
                 o.vertex = UnityObjectToClipPos( v.vertex );//local space to clip space
-                o.normals = UnityObjectToWorldNormal( v.normals );//转换成世界坐标,当然，vert比pixel少，所以计算在vert里做更好
+                o.normal =  v.normals ;//转换成世界坐标,当然，vert比pixel少，所以计算在vert里做更好
                 o.uv1 = v.uv0 * _Scale; //小知识，scale 大于1的时候，颜色越界但是仍然取最大值1，是合法的值
                 /* o.uv = TRANSFORM_TEX(v.uv, _MainTex); */
             //    UNITY_TRANSFER_FOG(o,o.vertex);//去掉，今天我们不管
@@ -108,13 +183,17 @@ Shader "Unlit/Shader1"
 
                 //float4 myValue;
                 
-                float t = InverseLerp(_ColorStart, _ColorEnd, i.uv1.x);
-                t =frac( cos(t*5)*0.5 +0.5);//返回t的小数部分
-                float4 outColor = lerp(_ColorA, _ColorB, t);
+            //    float t = InverseLerp(_ColorStart, _ColorEnd, i.uv1.x);
+
+              //  float4 outColor = (t, 0, 0, 1);
               //  float2 otherValue = myValue.rg;//red & green，对于一个float4，value.xyzw和rgba指的都是float的4个值（1,2,3,4）
                 //如果float2 otherValue = myValue.gr;那就是把myValue的green值赋给otherValue的red值
                 //也就是所谓的swizzling(旋转)
-                return outColor;//一点用都没有的alpha，实心的
+
+                float2 uvsCentered = i.uv1 *2 - 1;
+                float radiaDistance = length(uvsCentered);
+
+                return float4(radiaDistance.xxx, 1);//因为shader里面true false用了01表示所以可以这么做
             }
             ENDCG
         }
