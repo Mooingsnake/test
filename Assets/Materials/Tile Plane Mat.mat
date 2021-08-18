@@ -70,11 +70,11 @@ Material:
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _IsCurrent: 0
-    - _IsSelectable: 1
+    - _IsSelectable: 0
     - _IsSelected: 0
     - _Metallic: 0
     - _Mode: 0
-    - _ModeType: 2
+    - _ModeType: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _Scale: 1

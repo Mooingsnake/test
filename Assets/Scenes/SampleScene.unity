@@ -460,7 +460,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: A
+  m_Text: K
 --- !u!222 &111609280
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -500,7 +500,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   originalPos: {x: 0, y: 0, z: 0}
   originalRot: {x: 0, y: 0, z: 0, w: 0}
-  modeType: 0
+  targetTile: {fileID: 0}
+  modeType: 1
   currentCharacter: {fileID: 0}
 --- !u!4 &133410907
 Transform:
@@ -873,7 +874,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 880033726}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1012,12 +1013,13 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  turnBaseCtl: {fileID: 133410906}
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
   distance: 0
   colliders: []
-  planeMat: {fileID: 0}
+  planeMat: {fileID: 2100000, guid: b601776c607c39b4ab59f004c387e0b8, type: 2}
 --- !u!4 &470298770 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8448584569290185617, guid: 1e811aa1573a1204196774238b36da7e, type: 3}
@@ -1034,7 +1036,7 @@ GameObject:
   - component: {fileID: 482141477}
   - component: {fileID: 482141478}
   m_Layer: 5
-  m_Name: wer
+  m_Name: HPSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1055,7 +1057,7 @@ RectTransform:
   - {fileID: 200925990}
   - {fileID: 1010391732}
   m_Father: {fileID: 880033726}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1157,7 +1159,7 @@ GameObject:
   - component: {fileID: 506675951}
   - component: {fileID: 506675950}
   m_Layer: 5
-  m_Name: Btn_B
+  m_Name: Btn_J
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1337,7 +1339,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: B
+  m_Text: J
 --- !u!222 &535913423
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1357,7 +1359,7 @@ GameObject:
   - component: {fileID: 623981549}
   - component: {fileID: 623981550}
   m_Layer: 5
-  m_Name: re (1)
+  m_Name: MPSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1378,7 +1380,7 @@ RectTransform:
   - {fileID: 634217461}
   - {fileID: 1810455021}
   m_Father: {fileID: 880033726}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1674,7 +1676,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Y
+  m_Text: L
 --- !u!222 &721852681
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1712,9 +1714,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 482141477}
   - {fileID: 623981549}
   - {fileID: 441996953}
-  - {fileID: 482141477}
   m_Father: {fileID: 1768087267}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1966,7 +1968,7 @@ GameObject:
   - component: {fileID: 933389766}
   - component: {fileID: 933389765}
   m_Layer: 5
-  m_Name: Btn_Y
+  m_Name: Btn_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2302,7 +2304,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initTile: {fileID: 470298768}
   tileOffset: 2
-  map: {fileID: 1086829467}
   activeCharacter: {fileID: 0}
   fastestCharacter: {fileID: 0}
   initCharacters:
@@ -2930,7 +2931,7 @@ GameObject:
   - component: {fileID: 1700237995}
   - component: {fileID: 1700237994}
   m_Layer: 5
-  m_Name: 'Btn_A '
+  m_Name: Btn_K
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3001,7 +3002,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1700237995}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1700237995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3052,6 +3065,7 @@ GameObject:
   - component: {fileID: 1768087266}
   - component: {fileID: 1768087265}
   - component: {fileID: 1768087264}
+  - component: {fileID: 1768087268}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -3143,6 +3157,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1768087268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1768087263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70ba0a340fa59ff469c14f572e269e35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthText: {fileID: 200925991}
+  MagicText: {fileID: 1810455022}
+  healthSlider: {fileID: 0}
+  magicSlider: {fileID: 0}
+  btn_L: {fileID: 933389765}
+  btn_K: {fileID: 1700237994}
+  btn_J: {fileID: 0}
 --- !u!1 &1810455020
 GameObject:
   m_ObjectHideFlags: 0

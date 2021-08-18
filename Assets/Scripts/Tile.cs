@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
+    [Header("Settings")]
     public bool walkable = true;
     public bool current = false;
     public bool target = false;
     public bool selectable = false;
-
+    public TurnBaseController turnBaseCtl;//在地图生成器中生成时被赋值
 
     public List<Tile> adjacencyList = new List<Tile>();
 
@@ -21,9 +22,7 @@ public class Tile : MonoBehaviour
 
     void Start()
     {
-        // gameObject.AddComponent<Rigidbody>();
-        // Rigidbody rigidbody = GetComponent<Rigidbody>();
-        // rigidbody.useGravity = false;
+        //【warning】本来想放在tile初始化的时候同时绑定的，这样就不用遍历寻找了，但是我没找到正确的函数设置子级
           var re = gameObject.GetComponentsInChildren<MeshRenderer>();
             foreach(MeshRenderer render in re)
         {
@@ -35,24 +34,24 @@ public class Tile : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
+        //get the turnbaseController
+        SetModeType(turnBaseCtl.modeType);
 
+        //shader by the tile's condition
         if (current)
         {
-            //   GetComponent<Renderer>().material.color = Color.magenta;
              planeMat.SetFloat("_IsCurrent", 1.0f);
         }
         else if (selectable)
          {
-            // GetComponent<Renderer>().material.color = Color.red;
              planeMat.SetFloat("_IsSelectable", 1.0f);
         }
         else
         {
-            // GetComponent<Renderer>().material.color = Color.white;
-            // planeMat.SetColor("_TileColor", Color.clear);
+            //no special -> alpha
+            ResetShader();
         }
     }
     //Reset the tile to default state
@@ -96,6 +95,21 @@ public class Tile : MonoBehaviour
         }
       }
     }
+
+    private void ResetShader()
+    {
+        planeMat.SetFloat("_IsCurrent", 0f);
+        planeMat.SetFloat("_ModeType", 0f);
+        planeMat.SetFloat("_IsSelectable", 0f);
+    }
+
+    private void SetModeType(int typeMode)
+    {
+        planeMat.SetFloat("_ModeType", (float)typeMode);
+    }
+
+
+
 
 
 

@@ -9,7 +9,7 @@ public class MapGenerator : MonoBehaviour
     //GenerateMap needs
     public GameObject initTile;//to lock the object(Tile),later will be deleted
     public float tileOffset = 2.00f;
-    public GameObject map;
+    public Dictionary<Vector3, Tile> map;
 
 
 
@@ -19,6 +19,7 @@ public class MapGenerator : MonoBehaviour
     [SerializeField]private GameObject fastestCharacter;
     public List<GameObject> initCharacters = new List<GameObject>();
     [SerializeField]private Vector3 bornPos;//born position,different from every map;saved by a file
+    private TurnBaseController turnBaseCtl;
 
     void Awake()
     {
@@ -26,6 +27,8 @@ public class MapGenerator : MonoBehaviour
     }
     void Start()
     {
+      GetTurnBaseCtl();
+      turnBaseCtl.map = map; // 给控制器挂上map信息方便查找
       GenerateMap();
       GenerateCharacters();
       ActivateCharacter();
@@ -38,32 +41,26 @@ public class MapGenerator : MonoBehaviour
     }
     public void GenerateMap()
      {
-        //GameObject map =GameObject.Find("Map");
+        // GameObject map =GameObject.Find("Map");
        initTile = GameObject.FindGameObjectWithTag("Tile");
-       Vector3 pos ;
-       GameObject tile;
+        map = new Dictionary<Vector3, Tile>();
        for(int x = 0; x < 20; x++)
        {
-         for (int y = 0; y < 20; y++)
+         for (int z = 0; z < 20; z++)
          {
-           if (x==4) {
-             pos = new Vector3(x * tileOffset, tileOffset, y * tileOffset);
-             tile =(GameObject)Instantiate(initTile, pos, Quaternion.identity);
-             //tile.transform.parent = map.transform;
+           if (x==4) {// 凸出一列测试走路
+              InitTile(x, 1, z);
            }
-           pos = new Vector3(x * tileOffset, 0, y * tileOffset);
-           tile =(GameObject)Instantiate(initTile, pos, Quaternion.identity);
-              //tile.transform.parent = map.transform;
-
-         }
+              InitTile(x, 0, z);
+           }
        }
        Destroy(initTile);
      }
 
      public void GenerateCharacters()
      {
-    //needs to change when many roles loaded
-    //   initCharacters.add(GameObject.FindGameObjectWithTag("Jaye"));
+    // needs to change when many roles loaded
+    // initCharacters.add(GameObject.FindGameObjectWithTag("Jaye"));
        Vector3 pos = new Vector3(0.0f,1.00f,0.0f);
         float maxSpeed = 0f;
 
@@ -91,4 +88,25 @@ public class MapGenerator : MonoBehaviour
        PlayerMoves pm = activeCharacter.GetComponent<PlayerMoves>();
        pm.activated = true;
      }
+
+    private void InitTile(float x, float y, float z)
+    {
+
+        // 根据位置生成tile
+        Vector3 pos = new Vector3(x * tileOffset, y * tileOffset, z * tileOffset);
+        Tile tile= Instantiate(initTile, pos, Quaternion.identity).GetComponent<Tile>();
+
+        // tile都放在字典里面
+        map.Add(pos, tile);
+
+        // 把回合控制器给我接上去
+        tile.turnBaseCtl = turnBaseCtl;
+    }
+
+    private void GetTurnBaseCtl()
+    {
+        //Manager是专门用在editor界面的名称
+        GameObject turnBaseManager = GameObject.Find("TurnBaseManager");
+        turnBaseCtl = turnBaseManager.GetComponent<TurnBaseController>();
+    }
 }
