@@ -32,7 +32,7 @@ Shader "Unlit/TileShader"
 
         Pass
         {
-            Blend  SrcAlpha OneMinusSrcAlpha // [SRC * A + DST * b]
+            Blend  SrcAlpha OneMinusSrcAlpha // [SRC * A + （1-SRC） * A]
             ZWrite Off
             ZTest LEqual
             CGPROGRAM
@@ -103,19 +103,19 @@ Shader "Unlit/TileShader"
                     finColor = RED;
                 }
                  // float4 finColor = _TileColor;
-                if (_IsSelectable && !_IsCurrent) {
+                if (_IsSelectable && !_IsCurrent) {  // 不是当前选中的就是颜色+渐变
                     return finColor * AlphaWave() ;
                 }
-                if (_IsCurrent && _ModeType < 2) {
+                if (_IsCurrent && _ModeType == MOVEMODE) {
                     return finColor * 1.2f;
                 }
-                if (_IsCurrent && _ModeType >= 2) {
+                if (_IsCurrent && (_ModeType == CURSORMODE || _ModeType == COMBATMODE)) {
                   //  finColor = float4(i.uv1,1,1);
                   float pattern = tex2D(_AimTex, i.uv1).x;
                   finColor =   lerp(RED , YELLOW,pattern);
                     return finColor ;
                 }
-                return HIDE;
+                return HIDE;   
 
             }
             ENDCG

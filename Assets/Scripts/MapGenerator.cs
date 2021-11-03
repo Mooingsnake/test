@@ -13,13 +13,13 @@ public class MapGenerator : MonoBehaviour
 
 
 
-    //ActiveCharacter,there is only one character activate in a moment
-    //changes when its motion is over.
+    //ActiveCharacter,there is only one character activate in a moment  ？需要做成单例么？
+    //change when its motion is over.
     public GameObject activeCharacter;
-    [SerializeField]private GameObject fastestCharacter;
-    public List<GameObject> initCharacters = new List<GameObject>();
-    [SerializeField]private Vector3 bornPos;//born position,different from every map;saved by a file
-    private TurnBaseController turnBaseCtl;
+    [SerializeField]private GameObject fastestCharacter;  // 还没用，感觉应该每次选择next role的时候抽出来，而不是在这里设置变量
+    public List<GameObject> initCharacters = new List<GameObject>(); // 还没用
+    [SerializeField]private Vector3 bornPos; // born position,different from every map;saved by a file，还没用
+    private TurnBaseController turnBaseCtl;  
 
     void Awake()
     {
@@ -27,11 +27,11 @@ public class MapGenerator : MonoBehaviour
     }
     void Start()
     {
-      GetTurnBaseCtl();
-      turnBaseCtl.map = map; // 给控制器挂上map信息方便查找
-      GenerateMap();
+      GetTurnBaseCtl();  // GameObject.Find("TurnBaseManager");找到那个空gameobject
+      turnBaseCtl.map = map; // 给控制器挂上map信息方便查找，不过这个map还没用起来
+      GenerateMap();  // 地图生成
       GenerateCharacters();
-      ActivateCharacter();
+      ActivateCharacter();  // 这里要改，用了fastestPlayer这个变量，playermoves改成激活态
     }
 
 

@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2020.2/china_unity/release' branch; Version is '2020.2.2f1c1 (e7e650540bb3) revision 15197776'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Pro; OS build 19042.1110; Version 2009; 64bit' Language: 'zh' Physical Memory: 16299 MB
+OS: 'Windows 10 Pro; OS build 19042.1288; Version 2009; 64bit' Language: 'zh' Physical Memory: 16299 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
@@ -15,11 +15,11 @@ F:/myUnity/test
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-64816
+64562
 Successfully changed project path to: F:/myUnity/test
 F:/myUnity/test
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 23.19 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 21.90 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.2f1c1 (e7e650540bb3)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.2f1c1/Editor/Data/Resources/UnitySubsystems
@@ -35,94 +35,1063 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.2f1c1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.2f1c1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.2f1c1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56024
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56832
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.2f1c1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002209 seconds.
+Registered in 0.001873 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 31.44 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 22.41 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.915 seconds
+- Completed reload, in  0.804 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.000522 seconds.
+Registered in 0.000421 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.33 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.877 seconds
+- Completed reload, in  0.729 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1113 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 58.7 MB.
-System memory in use after: 58.8 MB.
+System memory in use before: 58.5 MB.
+System memory in use after: 58.6 MB.
 
 Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1558.
-Total: 2.273400 ms (FindLiveObjects: 0.265600 ms CreateObjectMapping: 0.043300 ms MarkObjects: 1.870300 ms  DeleteObjects: 0.091500 ms)
+Total: 1.914600 ms (FindLiveObjects: 0.203800 ms CreateObjectMapping: 0.029300 ms MarkObjects: 1.595600 ms  DeleteObjects: 0.084100 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Scripts/UIController.cs
-  artifactKey: Guid(70ba0a340fa59ff469c14f572e269e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/UIController.cs using Guid(70ba0a340fa59ff469c14f572e269e35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc5e6b279227ba9f181689689eedd38a') in 0.034492 seconds
-  Import took 0.058816 seconds .
+  path: Assets/3DModels/JYE -enemyt-cleanup-baketexture 1.fbx
+  artifactKey: Guid(d131ed2c243652e499caf9fab0c7b51b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3DModels/JYE -enemyt-cleanup-baketexture 1.fbx using Guid(d131ed2c243652e499caf9fab0c7b51b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5727466c4a3078eeda4a6467e22a9ade') in 0.194348 seconds
+  Import took 0.196922 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 17.454227 seconds.
-  path: Assets/Scripts/TurnBaseController.cs
-  artifactKey: Guid(2a587d7e6e0ecfd4584d64d3ecf299e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/TurnBaseController.cs using Guid(2a587d7e6e0ecfd4584d64d3ecf299e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '697b468e1adf88fce597f485a9d7230f') in 0.009311 seconds
-  Import took 0.012382 seconds .
+  Time since last request: 7.001197 seconds.
+  path: Assets/3DModels/uploads_files_186032_Maskboy.FBX
+  artifactKey: Guid(7a6a31842086e66418f9c4ac7d1cc9a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3DModels/uploads_files_186032_Maskboy.FBX using Guid(7a6a31842086e66418f9c4ac7d1cc9a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de93d2804dcb7358a2f1171e64b0e078') in 0.095640 seconds
+  Import took 0.098114 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 11.712448 seconds.
-  path: Assets/Scripts/TurnBaseController.cs
-  artifactKey: Guid(2a587d7e6e0ecfd4584d64d3ecf299e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/TurnBaseController.cs using Guid(2a587d7e6e0ecfd4584d64d3ecf299e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5112812fadba653bb99811bdce7d6c3') in 0.001826 seconds
-  Import took 0.003841 seconds .
+  Time since last request: 28.758954 seconds.
+  path: Assets/3DModels/uploads_files_186032_Maskboy.FBX
+  artifactKey: Guid(7a6a31842086e66418f9c4ac7d1cc9a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3DModels/uploads_files_186032_Maskboy.FBX using Guid(7a6a31842086e66418f9c4ac7d1cc9a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8284ebe9d7fa2c3ac4d6d98065bbac89') in 0.090477 seconds
+  Import took 0.092914 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2248.334678 seconds.
+  path: Assets/FourEvilDragonsHP/Materials
+  artifactKey: Guid(05c1ffad7c949de45bc9b6664fb58d2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Materials using Guid(05c1ffad7c949de45bc9b6664fb58d2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34e3104a94a27d4b7db99d59d2c91435') in 0.007001 seconds
+  Import took 0.009127 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.128113 seconds.
+  path: Assets/FourEvilDragonsHP/Materials/Skybox_Mat.mat
+  artifactKey: Guid(48ce278709c9add4cb03de6de56e1f59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Materials/Skybox_Mat.mat using Guid(48ce278709c9add4cb03de6de56e1f59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a272385bffeb94c281ec4c9fa0211c09') in 0.100779 seconds
+  Import took 0.102801 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000199 seconds.
+  path: Assets/FourEvilDragonsHP/Materials/Stage.mat
+  artifactKey: Guid(34466cf7960487a4380913c62e795ebd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Materials/Stage.mat using Guid(34466cf7960487a4380913c62e795ebd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0003a61ea156f3413a837a3ad9e8a0df') in 0.202026 seconds
+  Import took 0.204004 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.629066 seconds.
+  path: Assets/FourEvilDragonsHP/Materials/DragonTerrorBringer
+  artifactKey: Guid(4623ff13a8b77514e915c6871927fbd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Materials/DragonTerrorBringer using Guid(4623ff13a8b77514e915c6871927fbd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d7793f36134b9adf29ab2729c577289') in 0.005865 seconds
+  Import took 0.007792 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.258935 seconds.
+  path: Assets/FourEvilDragonsHP/Materials/DragonTerrorBringer/BlueHP.mat
+  artifactKey: Guid(dcc7344671ccf0044a1fb5038007860e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Materials/DragonTerrorBringer/BlueHP.mat using Guid(dcc7344671ccf0044a1fb5038007860e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5ec19c6bc1c839425d52fdde14cb498') in 0.017537 seconds
+  Import took 0.019771 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000183 seconds.
+  path: Assets/FourEvilDragonsHP/Materials/DragonTerrorBringer/PurpleHP.mat
+  artifactKey: Guid(2cc3d51c3b46bec4a95b1cf2d2488afd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Materials/DragonTerrorBringer/PurpleHP.mat using Guid(2cc3d51c3b46bec4a95b1cf2d2488afd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f0e06ba533d69df130a4c4d3c9d75e8') in 0.013409 seconds
+  Import took 0.015208 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000187 seconds.
+  path: Assets/FourEvilDragonsHP/Materials/DragonTerrorBringer/GreenHP.mat
+  artifactKey: Guid(63a8442de5af83f49902935ef0d8904e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Materials/DragonTerrorBringer/GreenHP.mat using Guid(63a8442de5af83f49902935ef0d8904e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7cfe26f24fb59353445646197c6938bc') in 0.013265 seconds
+  Import took 0.015330 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/FourEvilDragonsHP/Materials/DragonTerrorBringer/RedHP.mat
+  artifactKey: Guid(3cf5d93e63ceca94da9ffb40a6ed68ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Materials/DragonTerrorBringer/RedHP.mat using Guid(3cf5d93e63ceca94da9ffb40a6ed68ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '519ed9127d1fad774b19ba2691cf2230') in 0.018548 seconds
+  Import took 0.020846 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.490613 seconds.
+  path: Assets/FourEvilDragonsHP/Materials/DragonUsurper/BlueHP.mat
+  artifactKey: Guid(b610c12dfb915564fa7d6ed9771555e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Materials/DragonUsurper/BlueHP.mat using Guid(b610c12dfb915564fa7d6ed9771555e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf01cdf9b9f8947ef5408602e2e79f98') in 0.016057 seconds
+  Import took 0.018182 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000169 seconds.
+  path: Assets/FourEvilDragonsHP/Materials/DragonUsurper/RedHP.mat
+  artifactKey: Guid(1131ac1e42ee4884ab91bd69310a2715) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Materials/DragonUsurper/RedHP.mat using Guid(1131ac1e42ee4884ab91bd69310a2715) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4a6921b6fbe06b85d409b1a1bd6104d') in 0.014093 seconds
+  Import took 0.015971 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/FourEvilDragonsHP/Materials/DragonUsurper/GreenHP.mat
+  artifactKey: Guid(acd197acde96c544b8d8fd85cc2e8b20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Materials/DragonUsurper/GreenHP.mat using Guid(acd197acde96c544b8d8fd85cc2e8b20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5916974fed63e64c5fbfc01de93192b4') in 0.019478 seconds
+  Import took 0.021783 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000188 seconds.
+  path: Assets/FourEvilDragonsHP/Materials/DragonUsurper/PurpleHP.mat
+  artifactKey: Guid(c6a1d1f1e0ac339489c17274f110669a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Materials/DragonUsurper/PurpleHP.mat using Guid(c6a1d1f1e0ac339489c17274f110669a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de2702fb2421fcf02878bf3afcc48217') in 0.015015 seconds
+  Import took 0.017395 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.520299 seconds.
+  path: Assets/FourEvilDragonsHP/Materials/DragonSoulEater
+  artifactKey: Guid(65e52724438f3c14fbf3c6fda9eee6d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Materials/DragonSoulEater using Guid(65e52724438f3c14fbf3c6fda9eee6d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '623c8734c9122471c9b386b393de0832') in 0.006013 seconds
+  Import took 0.008036 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.289722 seconds.
+  path: Assets/FourEvilDragonsHP/Materials/DragonSoulEater/BlueHP.mat
+  artifactKey: Guid(5fcde950c31077243850f23d14ba9a5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Materials/DragonSoulEater/BlueHP.mat using Guid(5fcde950c31077243850f23d14ba9a5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a0155f2a947c43e5759e6bf77750909') in 0.014635 seconds
+  Import took 0.016664 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000226 seconds.
+  path: Assets/FourEvilDragonsHP/Materials/DragonSoulEater/GreyHP.mat
+  artifactKey: Guid(0526c5be35ba93547acf614ed1950a2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Materials/DragonSoulEater/GreyHP.mat using Guid(0526c5be35ba93547acf614ed1950a2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7c7e7837a0762f5f56d6a94177e6828') in 0.020456 seconds
+  Import took 0.022687 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000181 seconds.
+  path: Assets/FourEvilDragonsHP/Materials/DragonSoulEater/RedHP.mat
+  artifactKey: Guid(483bc84e9c06fb74a978565bf66ff42d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Materials/DragonSoulEater/RedHP.mat using Guid(483bc84e9c06fb74a978565bf66ff42d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f1fdcd4468246e59770745d7fdf0ce3') in 0.013752 seconds
+  Import took 0.015665 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/FourEvilDragonsHP/Materials/DragonSoulEater/GreenHP.mat
+  artifactKey: Guid(1b51484aceb3349479b6c084713a5517) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Materials/DragonSoulEater/GreenHP.mat using Guid(1b51484aceb3349479b6c084713a5517) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec55c715c66dce0e4b2aff83624d841d') in 0.017381 seconds
+  Import took 0.019447 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.888190 seconds.
+  path: Assets/FourEvilDragonsHP/Materials/DragonNightmare/AlbinoHP.mat
+  artifactKey: Guid(8000a685f5b509b45b455c9ffd1f347f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Materials/DragonNightmare/AlbinoHP.mat using Guid(8000a685f5b509b45b455c9ffd1f347f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6bf90f1e1a56fef6328e7ccf6c52f2b4') in 0.012948 seconds
+  Import took 0.015024 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/FourEvilDragonsHP/Materials/DragonNightmare/GreenHP.mat
+  artifactKey: Guid(ca5605f13d3937e40b508c59662c25fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Materials/DragonNightmare/GreenHP.mat using Guid(ca5605f13d3937e40b508c59662c25fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2da3a3553bd80199c72e7250c54e282') in 0.012002 seconds
+  Import took 0.014108 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000236 seconds.
+  path: Assets/FourEvilDragonsHP/Materials/DragonNightmare/DarkBlueHP.mat
+  artifactKey: Guid(8a2d1f9276d746a42925272a2372ca11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Materials/DragonNightmare/DarkBlueHP.mat using Guid(8a2d1f9276d746a42925272a2372ca11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d46c295bc19cb36720378b2d233fab4') in 0.013372 seconds
+  Import took 0.015530 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/FourEvilDragonsHP/Materials/DragonNightmare/BlueHP.mat
+  artifactKey: Guid(81d2b67dc7484724095d4343217c4e31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Materials/DragonNightmare/BlueHP.mat using Guid(81d2b67dc7484724095d4343217c4e31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0964a9869e2afed6c94881f8226c10e') in 0.012598 seconds
+  Import took 0.014764 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.006595 seconds.
+  path: Assets/FourEvilDragonsHP/Materials/DragonNightmare/BlueHP.mat
+  artifactKey: Guid(81d2b67dc7484724095d4343217c4e31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Materials/DragonNightmare/BlueHP.mat using Guid(81d2b67dc7484724095d4343217c4e31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0964a9869e2afed6c94881f8226c10e') in 0.012548 seconds
+  Import took 0.014807 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.628589 seconds.
+  path: Assets/FourEvilDragonsHP/Materials/DragonUsurper
+  artifactKey: Guid(266c8b22508d1b84397cfd1f98dad5da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Materials/DragonUsurper using Guid(266c8b22508d1b84397cfd1f98dad5da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '539ab951f91b915cbe931833863b7660') in 0.005635 seconds
+  Import took 0.007618 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.008059 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonNightMare
+  artifactKey: Guid(6a8b5480e0c64544a912f4218b0519bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonNightMare using Guid(6a8b5480e0c64544a912f4218b0519bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8672c018b680f28cdcce9fee63471b48') in 0.005488 seconds
+  Import took 0.007597 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000515 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonNightMare
+  artifactKey: Guid(6a8b5480e0c64544a912f4218b0519bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonNightMare using Guid(6a8b5480e0c64544a912f4218b0519bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8672c018b680f28cdcce9fee63471b48') in 0.001553 seconds
+  Import took 0.003502 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.202466 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonNightMare/Basic Attack.fbx
+  artifactKey: Guid(f882585276163954fbc547e18dea9d6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonNightMare/Basic Attack.fbx using Guid(f882585276163954fbc547e18dea9d6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '255d14cb8506c7f38bcdcb3d85206af9') in 0.029549 seconds
+  Import took 0.031996 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000156 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonNightMare/Sleep.fbx
+  artifactKey: Guid(5cfe5b96be26d60478f7a5749d947a62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonNightMare/Sleep.fbx using Guid(5cfe5b96be26d60478f7a5749d947a62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e68ad1ece48ea7ff71148050ddd5477b') in 0.031488 seconds
+  Import took 0.033721 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000169 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonNightMare/defend.fbx
+  artifactKey: Guid(b97d7fae708615b4bab97d3197b11bf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonNightMare/defend.fbx using Guid(b97d7fae708615b4bab97d3197b11bf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a9cca23a99feae3cdf5a9f4a67f4b7f') in 0.035446 seconds
+  Import took 0.037745 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000206 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonNightMare/getHit.fbx
+  artifactKey: Guid(a640f611148020047b485abcfdbb49cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonNightMare/getHit.fbx using Guid(a640f611148020047b485abcfdbb49cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5cfc6ce3ce1895f75911bd5748deddc0') in 0.021844 seconds
+  Import took 0.023987 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000180 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonNightMare/idle02.fbx
+  artifactKey: Guid(9d21fa939f154f147ac659d23465c4ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonNightMare/idle02.fbx using Guid(9d21fa939f154f147ac659d23465c4ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f657d57b58884ebc0c92c0a0ec8eb5a') in 0.020870 seconds
+  Import took 0.023138 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonNightMare/Jump.fbx
+  artifactKey: Guid(11710095629f7e044ad54abf1af7fc13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonNightMare/Jump.fbx using Guid(11710095629f7e044ad54abf1af7fc13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d12bd2d002cb7f97ea0341ab221762b') in 0.021945 seconds
+  Import took 0.024005 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000182 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonNightMare/walkRight.fbx
+  artifactKey: Guid(0d450e707f0b2d646b814fe61b117d4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonNightMare/walkRight.fbx using Guid(0d450e707f0b2d646b814fe61b117d4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1152fbca69fda5572d43b723868e38bc') in 0.021633 seconds
+  Import took 0.023843 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000186 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonNightMare/walkLeft.fbx
+  artifactKey: Guid(f0e26e0f2a772af4a95ec08b88a49302) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonNightMare/walkLeft.fbx using Guid(f0e26e0f2a772af4a95ec08b88a49302) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1420be5f8fa28537b87b703df5966399') in 0.022922 seconds
+  Import took 0.024910 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonNightMare/die.fbx
+  artifactKey: Guid(4b1dcfc331de54549a94b650385f751e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonNightMare/die.fbx using Guid(4b1dcfc331de54549a94b650385f751e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5eb126f1b7318d889eb8f92bb1cf4037') in 0.021591 seconds
+  Import took 0.024043 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000170 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonNightMare/walk.fbx
+  artifactKey: Guid(57b96fcfb13429847939b2e633026c89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonNightMare/walk.fbx using Guid(57b96fcfb13429847939b2e633026c89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e05759b294b77eacb34fc34e7abd130d') in 0.022405 seconds
+  Import took 0.024918 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonNightMare/idle01.fbx
+  artifactKey: Guid(e6a84557d6aca2f4daa1b608739267d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonNightMare/idle01.fbx using Guid(e6a84557d6aca2f4daa1b608739267d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c25834e46d88ca2fe705b072c61ce9b8') in 0.020345 seconds
+  Import took 0.022469 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonNightMare/Claw Attack.fbx
+  artifactKey: Guid(a8d68f882ac2f2f48982204cc9c22f27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonNightMare/Claw Attack.fbx using Guid(a8d68f882ac2f2f48982204cc9c22f27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fd5e0d734647780d3d02489be6980e6') in 0.021747 seconds
+  Import took 0.024273 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000200 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonNightMare/walkBack.fbx
+  artifactKey: Guid(febc3ddda9a2b7e48a803fdfeeaf757d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonNightMare/walkBack.fbx using Guid(febc3ddda9a2b7e48a803fdfeeaf757d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f19e22e3780b49525fcf503777947dd') in 0.021179 seconds
+  Import took 0.023249 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000193 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonNightMare/run.fbx
+  artifactKey: Guid(e225de8969f5f7348aa6e6a2c92c7859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonNightMare/run.fbx using Guid(e225de8969f5f7348aa6e6a2c92c7859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c63f5e28c1c039da001041e7a3d947e2') in 0.021143 seconds
+  Import took 0.023428 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000223 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonNightMare/scream.fbx
+  artifactKey: Guid(111c5f2baba40874c84636fdf0cf746e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonNightMare/scream.fbx using Guid(111c5f2baba40874c84636fdf0cf746e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1d3c3d9e1d7db04a30f3795367a4e12') in 0.021394 seconds
+  Import took 0.023606 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonNightMare/Horn Attack.fbx
+  artifactKey: Guid(19a5a8dd9f6eaba49980048610a6e8e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonNightMare/Horn Attack.fbx using Guid(19a5a8dd9f6eaba49980048610a6e8e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd824242a3d21f10f2e5ef6c6527bff91') in 0.022022 seconds
+  Import took 0.024069 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.553281 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonSoulEater/Basic Attack.fbx
+  artifactKey: Guid(5d9efb65c776b714fb5123711f07de0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonSoulEater/Basic Attack.fbx using Guid(5d9efb65c776b714fb5123711f07de0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '402be6f890944e62ed216c4303a6f4e8') in 0.032125 seconds
+  Import took 0.034539 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000266 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonSoulEater/Idle.fbx
+  artifactKey: Guid(53822ae0b4a40a24b97e0cf0388e4248) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonSoulEater/Idle.fbx using Guid(53822ae0b4a40a24b97e0cf0388e4248) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0dee9d9bb7a407727e98c8993c10a17f') in 0.026316 seconds
+  Import took 0.028610 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000233 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonSoulEater/Fly Forward.fbx
+  artifactKey: Guid(5fa09084d33ac9046a4a22372e78213e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonSoulEater/Fly Forward.fbx using Guid(5fa09084d33ac9046a4a22372e78213e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0cf884c389a1e9468c054c2cd9a4abc') in 0.032186 seconds
+  Import took 0.034566 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000188 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonSoulEater/Sleeping.fbx
+  artifactKey: Guid(0b0985d8d75993d4ba1c094379da358c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonSoulEater/Sleeping.fbx using Guid(0b0985d8d75993d4ba1c094379da358c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7917fde8e29f068cc81233bb3d4691b9') in 0.033502 seconds
+  Import took 0.035784 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000204 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonSoulEater/Fly Float.fbx
+  artifactKey: Guid(e02bdaca3b0c3284ab993c4eba862036) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonSoulEater/Fly Float.fbx using Guid(e02bdaca3b0c3284ab993c4eba862036) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fa38cc00e286b13919a9db8c0f46baa') in 0.027613 seconds
+  Import took 0.029936 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000184 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonSoulEater/Get Hit.fbx
+  artifactKey: Guid(34cbf41484d0da24e9a24545c9d5a332) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonSoulEater/Get Hit.fbx using Guid(34cbf41484d0da24e9a24545c9d5a332) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1de629ba002605af5755df9b392bc748') in 0.044920 seconds
+  Import took 0.046927 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000184 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonSoulEater/Fly Glide.fbx
+  artifactKey: Guid(28a39de94def6c84ca4b447fa78a3a66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonSoulEater/Fly Glide.fbx using Guid(28a39de94def6c84ca4b447fa78a3a66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ffcd78cf6490352af060dbc21fdf8bb8') in 0.034527 seconds
+  Import took 0.036627 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000201 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonSoulEater/Scream.fbx
+  artifactKey: Guid(8b0b248c4105fd841aad612f61769ae9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonSoulEater/Scream.fbx using Guid(8b0b248c4105fd841aad612f61769ae9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4db9ced3a03bcc01d329c637e4707dbf') in 0.021010 seconds
+  Import took 0.023087 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000188 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonSoulEater/Run.fbx
+  artifactKey: Guid(93048e03d4dc597468fce555d02e9274) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonSoulEater/Run.fbx using Guid(93048e03d4dc597468fce555d02e9274) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3083d09e8022c263ce22c1f9eacc1c81') in 0.021794 seconds
+  Import took 0.024181 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000219 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonSoulEater/Fireball Shoot.fbx
+  artifactKey: Guid(6e4f9ef5485ccb04299f52ceae24d120) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonSoulEater/Fireball Shoot.fbx using Guid(6e4f9ef5485ccb04299f52ceae24d120) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e013d30c2165858187a8d0db6d5dcd3') in 0.020790 seconds
+  Import took 0.023053 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000185 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonSoulEater/Tail Attack.fbx
+  artifactKey: Guid(1e32448c0eb5bdb45b3a576fb8011df0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonSoulEater/Tail Attack.fbx using Guid(1e32448c0eb5bdb45b3a576fb8011df0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa0a1740e34d0a77df2673f6407003f8') in 0.020550 seconds
+  Import took 0.022492 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000217 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonSoulEater/Land.fbx
+  artifactKey: Guid(9b846aa063f67a34b80cef9a15befe38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonSoulEater/Land.fbx using Guid(9b846aa063f67a34b80cef9a15befe38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c677ea4ac51eeeed59623afc478f81f7') in 0.023732 seconds
+  Import took 0.026033 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000190 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonSoulEater/Die.fbx
+  artifactKey: Guid(6f83b9d81f8c7854baeca6ff691bb0c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonSoulEater/Die.fbx using Guid(6f83b9d81f8c7854baeca6ff691bb0c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6dfb47493b7e90888356178bcba59986') in 0.021144 seconds
+  Import took 0.023140 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000194 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonSoulEater/Defend.fbx
+  artifactKey: Guid(e0b6d06a8887b3641a0608659230e121) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonSoulEater/Defend.fbx using Guid(e0b6d06a8887b3641a0608659230e121) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed3d2eda3b2418988a76110872787595') in 0.020869 seconds
+  Import took 0.022973 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000196 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonSoulEater/Fly Fireball Shoot.fbx
+  artifactKey: Guid(37760f0079ba2124cb0198d37570b625) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonSoulEater/Fly Fireball Shoot.fbx using Guid(37760f0079ba2124cb0198d37570b625) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40a315ff93a4c3b63bf303250fbd053c') in 0.021330 seconds
+  Import took 0.023341 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000188 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonSoulEater/Walk.fbx
+  artifactKey: Guid(555c2f8b240202a4c8f3c3f412587e5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonSoulEater/Walk.fbx using Guid(555c2f8b240202a4c8f3c3f412587e5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd81a0f40718bab04a53513d8bad903c') in 0.019907 seconds
+  Import took 0.022034 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000187 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonSoulEater/Take Off.fbx
+  artifactKey: Guid(24717e004c7ffb84a901d2dfdcc426bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonSoulEater/Take Off.fbx using Guid(24717e004c7ffb84a901d2dfdcc426bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24ce871aba3828e48aaa03d7d7568a12') in 0.021823 seconds
+  Import took 0.023981 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.040031 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonTerrorBringer/AttackWingClaw.fbx
+  artifactKey: Guid(dbbf408e4d195cf41bc2f3c7589b1c89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonTerrorBringer/AttackWingClaw.fbx using Guid(dbbf408e4d195cf41bc2f3c7589b1c89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '980475a4faabf1d93f6c935c4f656775') in 0.022093 seconds
+  Import took 0.024561 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000188 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonTerrorBringer/Landing.fbx
+  artifactKey: Guid(f728a9645c91629469fdc1e9a452ddea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonTerrorBringer/Landing.fbx using Guid(f728a9645c91629469fdc1e9a452ddea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6a68eea0cbf1712ea695f7bbb2fee76') in 0.024001 seconds
+  Import took 0.026278 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000186 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonTerrorBringer/Defend.fbx
+  artifactKey: Guid(44efacea9a9a1394c9a977bd6dd3972c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonTerrorBringer/Defend.fbx using Guid(44efacea9a9a1394c9a977bd6dd3972c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '395d392701d8a6b8afa32b483799d60e') in 0.021352 seconds
+  Import took 0.023481 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000191 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonTerrorBringer/Run.fbx
+  artifactKey: Guid(9700edab3a23d7d408e78a7cb99cf41d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonTerrorBringer/Run.fbx using Guid(9700edab3a23d7d408e78a7cb99cf41d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b9e22428955c4e426c7c88ed38df3fb') in 0.022589 seconds
+  Import took 0.025262 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000221 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonTerrorBringer/sleep.fbx
+  artifactKey: Guid(d1f47f7ac86a75840bfb342ed7ca65d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonTerrorBringer/sleep.fbx using Guid(d1f47f7ac86a75840bfb342ed7ca65d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9524d07533cbc96e5d4076ba1bebaf74') in 0.023662 seconds
+  Import took 0.026037 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000847 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonTerrorBringer/GetHit.fbx
+  artifactKey: Guid(01f3cd440df370b4796840c93effc251) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonTerrorBringer/GetHit.fbx using Guid(01f3cd440df370b4796840c93effc251) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8767cfe910697c1e5b6bb02185308db9') in 0.022368 seconds
+  Import took 0.024869 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonTerrorBringer/TakeOff.fbx
+  artifactKey: Guid(2881cf760574bd24280f47207b567e43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonTerrorBringer/TakeOff.fbx using Guid(2881cf760574bd24280f47207b567e43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3589cc7645da7b8dad237406f3916726') in 0.021019 seconds
+  Import took 0.023588 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000199 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonTerrorBringer/Flame Attack.fbx
+  artifactKey: Guid(b39c8cd2e979bd0458d96f045c9e4464) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonTerrorBringer/Flame Attack.fbx using Guid(b39c8cd2e979bd0458d96f045c9e4464) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16e581017697b2d6f6ffb9910e43d665') in 0.022316 seconds
+  Import took 0.024461 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000190 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonTerrorBringer/FlyForward.fbx
+  artifactKey: Guid(d1facc13bc40c14408f2106cf788a7fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonTerrorBringer/FlyForward.fbx using Guid(d1facc13bc40c14408f2106cf788a7fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '632d37f5865640d2f0878437bb8b0282') in 0.021368 seconds
+  Import took 0.023535 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000188 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonTerrorBringer/FlyGlide.fbx
+  artifactKey: Guid(29b94464c227dad4997918129dad480c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonTerrorBringer/FlyGlide.fbx using Guid(29b94464c227dad4997918129dad480c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3fecaa1dff4cdf6476daed88fca5608') in 0.021910 seconds
+  Import took 0.024253 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000188 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonTerrorBringer/die.fbx
+  artifactKey: Guid(49d0a594e1ca9d54ca3e17fb24d28f5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonTerrorBringer/die.fbx using Guid(49d0a594e1ca9d54ca3e17fb24d28f5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f20d8670e21e526e2c8e99f40aaf866') in 0.021212 seconds
+  Import took 0.023569 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000188 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonTerrorBringer/idle01.fbx
+  artifactKey: Guid(2f381863b81afe445bb3bbd18f1e90cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonTerrorBringer/idle01.fbx using Guid(2f381863b81afe445bb3bbd18f1e90cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd6019fc87e0877b461985cd2cd737c9') in 0.021200 seconds
+  Import took 0.023443 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonTerrorBringer/Basic Attack.fbx
+  artifactKey: Guid(601b9e9a8720f834fb218a15d9f3ae63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonTerrorBringer/Basic Attack.fbx using Guid(601b9e9a8720f834fb218a15d9f3ae63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4917d3e9d2e9164bb3dbd636fc28774') in 0.020498 seconds
+  Import took 0.022579 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000187 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonTerrorBringer/FlyAttack.fbx
+  artifactKey: Guid(215d9268815c12d4389d713b8b1f8b12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonTerrorBringer/FlyAttack.fbx using Guid(215d9268815c12d4389d713b8b1f8b12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90df2e78f41972dfa6f37dbee1040743') in 0.021714 seconds
+  Import took 0.024045 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000192 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonTerrorBringer/walk.fbx
+  artifactKey: Guid(ac9b8cd5f91eeef44a25fce0f31885c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonTerrorBringer/walk.fbx using Guid(ac9b8cd5f91eeef44a25fce0f31885c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aae1e0a7dcdc44f80ee0334bafebce79') in 0.021257 seconds
+  Import took 0.023693 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000198 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonTerrorBringer/scream.fbx
+  artifactKey: Guid(221d076625b05194c872aaa907b8f0cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonTerrorBringer/scream.fbx using Guid(221d076625b05194c872aaa907b8f0cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d7b1b6c8d16614fa57bcf4a88e8882a') in 0.021691 seconds
+  Import took 0.024110 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000250 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonTerrorBringer/FlyIdle.fbx
+  artifactKey: Guid(fe8f656bdccb4074683e623a09c9728e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonTerrorBringer/FlyIdle.fbx using Guid(fe8f656bdccb4074683e623a09c9728e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46a544f01d7fac8082da4e616e5f7f10') in 0.022063 seconds
+  Import took 0.024419 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000193 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonTerrorBringer/idle02.fbx
+  artifactKey: Guid(cbbe4ed6e6acf294e9df235ff6184874) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonTerrorBringer/idle02.fbx using Guid(cbbe4ed6e6acf294e9df235ff6184874) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4bd900fc52969db7acd3c9ef67dd906d') in 0.020683 seconds
+  Import took 0.023197 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.090753 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonUsurper/attackFlame.fbx
+  artifactKey: Guid(f3c4af16992f14c43a050675b9be2f68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonUsurper/attackFlame.fbx using Guid(f3c4af16992f14c43a050675b9be2f68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6133ca0dcb6a3a01fe5a877770ad77dd') in 0.023200 seconds
+  Import took 0.025685 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000224 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonUsurper/FlyIdle.fbx
+  artifactKey: Guid(7508a417409ed134ea8cac8e87247637) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonUsurper/FlyIdle.fbx using Guid(7508a417409ed134ea8cac8e87247637) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24ff7df911b7b4e3efe772d72b131781') in 0.027715 seconds
+  Import took 0.030180 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000182 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonUsurper/Land.fbx
+  artifactKey: Guid(16d67d90d0f2e3f4995c3c82004acb92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonUsurper/Land.fbx using Guid(16d67d90d0f2e3f4995c3c82004acb92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74fb3e53f83c116932cad5b0e0574441') in 0.027846 seconds
+  Import took 0.030408 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000199 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonUsurper/Defend.fbx
+  artifactKey: Guid(0cbecf51da098bb49a79d74e183a1695) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonUsurper/Defend.fbx using Guid(0cbecf51da098bb49a79d74e183a1695) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd463ea074bfba0a656c851d12b9e1117') in 0.023948 seconds
+  Import took 0.026322 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000191 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonUsurper/Scream.fbx
+  artifactKey: Guid(497f35860988216419561f5b7835a430) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonUsurper/Scream.fbx using Guid(497f35860988216419561f5b7835a430) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b532d94c962066bff0df42dff3504ab') in 0.030331 seconds
+  Import took 0.032744 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000185 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonUsurper/FlyFlame.fbx
+  artifactKey: Guid(5d9e1f89045bd0946b0908d6f9d29050) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonUsurper/FlyFlame.fbx using Guid(5d9e1f89045bd0946b0908d6f9d29050) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb39ca28526e125b27dd3a75dbff2030') in 0.032638 seconds
+  Import took 0.034789 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000212 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonUsurper/idle02.fbx
+  artifactKey: Guid(df5d29c6a8c8f1c4caef2b4c1d0b073a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonUsurper/idle02.fbx using Guid(df5d29c6a8c8f1c4caef2b4c1d0b073a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cc17c923610967b078f50feda14b4cb') in 0.024459 seconds
+  Import took 0.026840 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000202 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonUsurper/FlyForward.fbx
+  artifactKey: Guid(3ab266bf94f3a1a4bb030eb1b90b8600) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonUsurper/FlyForward.fbx using Guid(3ab266bf94f3a1a4bb030eb1b90b8600) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7099e423c9a93a271b7772d19110042f') in 0.027029 seconds
+  Import took 0.029603 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000213 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonUsurper/idle01.fbx
+  artifactKey: Guid(f862cf09513abb14cbba0e94da9a410f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonUsurper/idle01.fbx using Guid(f862cf09513abb14cbba0e94da9a410f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b5db2d562a4d7b918ab50e1cdfe63a5') in 0.030077 seconds
+  Import took 0.037541 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000190 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonUsurper/attackMouth.fbx
+  artifactKey: Guid(9ad2ad510a1fd694392849b8dce337e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonUsurper/attackMouth.fbx using Guid(9ad2ad510a1fd694392849b8dce337e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d8dcfc2b0e26a2eea99c2840c6f4b25') in 0.029985 seconds
+  Import took 0.032201 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000203 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonUsurper/Sleep.fbx
+  artifactKey: Guid(1cdc51d0424856e438d5215d61193412) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonUsurper/Sleep.fbx using Guid(1cdc51d0424856e438d5215d61193412) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5de46ff8a57dda11cc40c40286a684c') in 0.027272 seconds
+  Import took 0.029686 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000222 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonUsurper/Die.fbx
+  artifactKey: Guid(347d2e064d3a3f946b17655dcc998386) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonUsurper/Die.fbx using Guid(347d2e064d3a3f946b17655dcc998386) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28cafc7bbba34dd8f3f1743f5804ed63') in 0.025892 seconds
+  Import took 0.028528 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000190 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonUsurper/attackHand.fbx
+  artifactKey: Guid(1420a40f7b2cd1341944b103718427f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonUsurper/attackHand.fbx using Guid(1420a40f7b2cd1341944b103718427f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05a4ced83c1173e0355ee11ecbe9be56') in 0.027425 seconds
+  Import took 0.029947 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000208 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonUsurper/takeOff.fbx
+  artifactKey: Guid(8d407c572ffcdd64a8093245d978392e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonUsurper/takeOff.fbx using Guid(8d407c572ffcdd64a8093245d978392e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32f863b7ec2a9daf87ae247dd44aea14') in 0.027475 seconds
+  Import took 0.029793 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000185 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonUsurper/Run.fbx
+  artifactKey: Guid(239b8825753a9e04ab2528df8f251b8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonUsurper/Run.fbx using Guid(239b8825753a9e04ab2528df8f251b8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcc16bf6704b981850f4c4e5f9a517c9') in 0.028063 seconds
+  Import took 0.030666 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonUsurper/FlyGlide.fbx
+  artifactKey: Guid(14d524dd6d57c094da8d73fee5077c6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonUsurper/FlyGlide.fbx using Guid(14d524dd6d57c094da8d73fee5077c6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80a976e4a8b9c0387cd5e4a382ece285') in 0.026316 seconds
+  Import took 0.028765 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonUsurper/Walk.fbx
+  artifactKey: Guid(9f159f6b3339be1409c27761d89f18bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonUsurper/Walk.fbx using Guid(9f159f6b3339be1409c27761d89f18bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab73c90984427f010fea1f9ecfc11cfc') in 0.026629 seconds
+  Import took 0.028866 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000186 seconds.
+  path: Assets/FourEvilDragonsHP/Animations/DragonUsurper/getHit.fbx
+  artifactKey: Guid(1f674d87cae509644a306408e4fecfc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations/DragonUsurper/getHit.fbx using Guid(1f674d87cae509644a306408e4fecfc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6daf53735f4891c2568aca2a35a216f7') in 0.026163 seconds
+  Import took 0.028398 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.492186 seconds.
+  path: Assets/FourEvilDragonsHP/Prefab/DragonNightmare
+  artifactKey: Guid(8dbb47dd5a279ff48ae42d51c9373f57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Prefab/DragonNightmare using Guid(8dbb47dd5a279ff48ae42d51c9373f57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'acd15eeac4fc5ec1fa7bb2792f0e89c4') in 0.008419 seconds
+  Import took 0.010399 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.177923 seconds.
+  path: Assets/FourEvilDragonsHP/Prefab/DragonNightmare/Albino.prefab
+  artifactKey: Guid(8252519d2c6fd014bb5f75765a8c4fda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Prefab/DragonNightmare/Albino.prefab using Guid(8252519d2c6fd014bb5f75765a8c4fda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0598809a3944dba47d8db9aa2cc19758') in 0.040042 seconds
+  Import took 0.043441 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000178 seconds.
+  path: Assets/FourEvilDragonsHP/Prefab/DragonNightmare/DarkBlue.prefab
+  artifactKey: Guid(a3e7850e56f7e2d4a8cb9e150f10c835) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Prefab/DragonNightmare/DarkBlue.prefab using Guid(a3e7850e56f7e2d4a8cb9e150f10c835) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0013169daf759ce816faa1baa5491778') in 0.039036 seconds
+  Import took 0.042467 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000199 seconds.
+  path: Assets/FourEvilDragonsHP/Prefab/DragonNightmare/Green.prefab
+  artifactKey: Guid(281a986484325de459dc1b3709335bc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Prefab/DragonNightmare/Green.prefab using Guid(281a986484325de459dc1b3709335bc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7843f2fd111e162ffbaa2216b67a8c8a') in 0.031951 seconds
+  Import took 0.035457 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000270 seconds.
+  path: Assets/FourEvilDragonsHP/Prefab/DragonNightmare/Blue.prefab
+  artifactKey: Guid(edd34a89cfe571f4ca766dcca2459bbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Prefab/DragonNightmare/Blue.prefab using Guid(edd34a89cfe571f4ca766dcca2459bbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c6731fa218958240b4d301794f72e7a') in 0.029840 seconds
+  Import took 0.033029 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.511069 seconds.
+  path: Assets/FourEvilDragonsHP/Prefab/DragonSoulEater/Blue.prefab
+  artifactKey: Guid(c644a2181ac22e740968a7ece97e8f36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Prefab/DragonSoulEater/Blue.prefab using Guid(c644a2181ac22e740968a7ece97e8f36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '343a9e89e1c302ae57e9ec00720401b8') in 0.032437 seconds
+  Import took 0.036111 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000201 seconds.
+  path: Assets/FourEvilDragonsHP/Prefab/DragonSoulEater/Green.prefab
+  artifactKey: Guid(88e480c990c9d6a458b5fc85fe1da2aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Prefab/DragonSoulEater/Green.prefab using Guid(88e480c990c9d6a458b5fc85fe1da2aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33be09d3de075e9711ca585a94a20ef2') in 0.031504 seconds
+  Import took 0.035005 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000200 seconds.
+  path: Assets/FourEvilDragonsHP/Prefab/DragonSoulEater/Red.prefab
+  artifactKey: Guid(70f277dcf2cdfdd4db7ee0ca76e07767) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Prefab/DragonSoulEater/Red.prefab using Guid(70f277dcf2cdfdd4db7ee0ca76e07767) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7662a68ae7b1a943bd9d2b9eee00f4dd') in 0.032283 seconds
+  Import took 0.035866 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/FourEvilDragonsHP/Prefab/DragonSoulEater/Grey.prefab
+  artifactKey: Guid(36c38a65d57de7d4a9a582f9ee857701) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Prefab/DragonSoulEater/Grey.prefab using Guid(36c38a65d57de7d4a9a582f9ee857701) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0a2f5b79bc08e1ccc8ffe7be9bef43f') in 0.031709 seconds
+  Import took 0.035079 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.450871 seconds.
+  path: Assets/FourEvilDragonsHP/Prefab/DragonTerrorBringer/Blue.prefab
+  artifactKey: Guid(20a769104331d8b48ac7d1ea0d49cdf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Prefab/DragonTerrorBringer/Blue.prefab using Guid(20a769104331d8b48ac7d1ea0d49cdf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31685c1b14021a22b4b07670dcb2ce51') in 0.030733 seconds
+  Import took 0.034487 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000202 seconds.
+  path: Assets/FourEvilDragonsHP/Prefab/DragonTerrorBringer/Purple.prefab
+  artifactKey: Guid(8e302007cba46d94b970c6a0955b9628) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Prefab/DragonTerrorBringer/Purple.prefab using Guid(8e302007cba46d94b970c6a0955b9628) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94a9d992db7623313033e327d669473a') in 0.031429 seconds
+  Import took 0.035027 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000235 seconds.
+  path: Assets/FourEvilDragonsHP/Prefab/DragonTerrorBringer/Green.prefab
+  artifactKey: Guid(4e7d7ecd1eafb1746a1fcb020505943c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Prefab/DragonTerrorBringer/Green.prefab using Guid(4e7d7ecd1eafb1746a1fcb020505943c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ecf771f22779bcf3e284723264c163b') in 0.031074 seconds
+  Import took 0.035032 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000200 seconds.
+  path: Assets/FourEvilDragonsHP/Prefab/DragonTerrorBringer/Red.prefab
+  artifactKey: Guid(59c100dd669d88f46b60555886d4dae7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Prefab/DragonTerrorBringer/Red.prefab using Guid(59c100dd669d88f46b60555886d4dae7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d70a4428aae0d3cfe4e8082edd295ca') in 0.029752 seconds
+  Import took 0.033543 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.427086 seconds.
+  path: Assets/FourEvilDragonsHP/Prefab/DragonUsurper/Blue.prefab
+  artifactKey: Guid(445a5c29e7f715947b713a753f242af0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Prefab/DragonUsurper/Blue.prefab using Guid(445a5c29e7f715947b713a753f242af0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4002a0383f0cc0815bb65f618e31c942') in 0.039101 seconds
+  Import took 0.043428 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000199 seconds.
+  path: Assets/FourEvilDragonsHP/Prefab/DragonUsurper/Purple.prefab
+  artifactKey: Guid(09ade59177310454ba3c93ae4b7dc125) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Prefab/DragonUsurper/Purple.prefab using Guid(09ade59177310454ba3c93ae4b7dc125) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bf7b64639225a8a4fe6ada69cda439c') in 0.036229 seconds
+  Import took 0.040530 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000235 seconds.
+  path: Assets/FourEvilDragonsHP/Prefab/DragonUsurper/Green.prefab
+  artifactKey: Guid(aeb4794909bc89d43b72ad784903e0f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Prefab/DragonUsurper/Green.prefab using Guid(aeb4794909bc89d43b72ad784903e0f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be496c1be1bdcae7d09440ef519df99a') in 0.035824 seconds
+  Import took 0.040362 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/FourEvilDragonsHP/Prefab/DragonUsurper/Red.prefab
+  artifactKey: Guid(eb58e8f2831a51f45a44a261e6710cdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Prefab/DragonUsurper/Red.prefab using Guid(eb58e8f2831a51f45a44a261e6710cdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6067556e4f83006d29dbcabd8c468771') in 0.040111 seconds
+  Import took 0.044390 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.269197 seconds.
+  path: Assets/FourEvilDragonsHP/Scene/SoulEaterScene.unity
+  artifactKey: Guid(5b7a5d45cc6bc794e84740c25259b3c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Scene/SoulEaterScene.unity using Guid(5b7a5d45cc6bc794e84740c25259b3c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f619bb2ba4cfa6279c51f811e7eb8af') in 0.005680 seconds
+  Import took 0.007746 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.359404 seconds.
+  path: Assets/FourEvilDragonsHP/Scene/UsurperScene.unity
+  artifactKey: Guid(cba58fffeb4be854491c94a10cb5f486) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Scene/UsurperScene.unity using Guid(cba58fffeb4be854491c94a10cb5f486) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04da0c666d531e7d4254065dff95711a') in 0.005890 seconds
+  Import took 0.007938 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.696058 seconds.
+  path: Assets/FourEvilDragonsHP/Scene/TerrorBringerScene.unity
+  artifactKey: Guid(abd974e8f4002d14994cb4d1bfce6443) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Scene/TerrorBringerScene.unity using Guid(abd974e8f4002d14994cb4d1bfce6443) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebfc60a745b7cd0ce730ebf8cb7077a3') in 0.006236 seconds
+  Import took 0.008247 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 53.425036 seconds.
+  path: Assets/FourEvilDragonsHP/Animations
+  artifactKey: Guid(16e415a8dc4a2c14191fdd1286652c36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animations using Guid(16e415a8dc4a2c14191fdd1286652c36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '166389664a9e1a4b2cc56dc42577ee0c') in 0.006022 seconds
+  Import took 0.008078 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.683167 seconds.
+  path: Assets/FourEvilDragonsHP/Animators
+  artifactKey: Guid(5ad071ae1343c5b4ca58aad5c0ea1099) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animators using Guid(5ad071ae1343c5b4ca58aad5c0ea1099) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1a1607d10456d061f616cc82c0636ad') in 0.005951 seconds
+  Import took 0.008030 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.878322 seconds.
+  path: Assets/FourEvilDragonsHP/Mesh
+  artifactKey: Guid(0553ea6024bba774baf76bde78e887fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Mesh using Guid(0553ea6024bba774baf76bde78e887fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54a1debdf6eb9295778e5d3d7be2e094') in 0.005693 seconds
+  Import took 0.007686 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.463551 seconds.
+  path: Assets/FourEvilDragonsHP/Prefab
+  artifactKey: Guid(4375e93352605df4cbdaa1c202fbe8e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Prefab using Guid(4375e93352605df4cbdaa1c202fbe8e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4e713c7385ca90d61cf91b668be35bd') in 0.005503 seconds
+  Import took 0.007483 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.495059 seconds.
+  path: Assets/FourEvilDragonsHP/Scene
+  artifactKey: Guid(ca5661a67750c244cbc0e8a0cbe2b134) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Scene using Guid(ca5661a67750c244cbc0e8a0cbe2b134) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eba22a1448c482a5b3f35cd1b0df17be') in 0.005512 seconds
+  Import took 0.007534 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.260837 seconds.
+  path: Assets/FourEvilDragonsHP/Prefab/DragonUsurper
+  artifactKey: Guid(da286c563d238e04c94cb6f9aa0a8331) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Prefab/DragonUsurper using Guid(da286c563d238e04c94cb6f9aa0a8331) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df7c6ea7560469e38c5c100b0ff42537') in 0.001947 seconds
+  Import took 0.004535 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000398 seconds.
+  path: Assets/FourEvilDragonsHP/Prefab/DragonUsurper
+  artifactKey: Guid(da286c563d238e04c94cb6f9aa0a8331) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Prefab/DragonUsurper using Guid(da286c563d238e04c94cb6f9aa0a8331) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df7c6ea7560469e38c5c100b0ff42537') in 0.001871 seconds
+  Import took 0.004293 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.714405 seconds.
+  path: Assets/FourEvilDragonsHP/Prefab/DragonTerrorBringer
+  artifactKey: Guid(318ed8b844006974bafd7411323cfa4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Prefab/DragonTerrorBringer using Guid(318ed8b844006974bafd7411323cfa4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97f8a03abf8d5463ea52165195b6cc4a') in 0.001759 seconds
+  Import took 0.003759 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/FourEvilDragonsHP/Prefab/DragonTerrorBringer
+  artifactKey: Guid(318ed8b844006974bafd7411323cfa4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Prefab/DragonTerrorBringer using Guid(318ed8b844006974bafd7411323cfa4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97f8a03abf8d5463ea52165195b6cc4a') in 0.001693 seconds
+  Import took 0.003488 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 32.552257 seconds.
+  path: Assets/FourEvilDragonsHP/Animators/UsurperCTRL.controller
+  artifactKey: Guid(5bd61d42e42f44b4a922495212e06f3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animators/UsurperCTRL.controller using Guid(5bd61d42e42f44b4a922495212e06f3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dad6f927f0a1175248161e7df2e9e52f') in 0.025313 seconds
+  Import took 0.029250 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000551 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.710 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1103 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 58.7 MB.
-System memory in use after: 58.8 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1560.
-Total: 1.804700 ms (FindLiveObjects: 0.239400 ms CreateObjectMapping: 0.036300 ms MarkObjects: 1.503900 ms  DeleteObjects: 0.023500 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000487 seconds.
+Registered in 0.000509 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
@@ -131,228 +1100,149 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.709 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1103 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 58.9 MB.
-System memory in use after: 59.0 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1562.
-Total: 1.466200 ms (FindLiveObjects: 0.168900 ms CreateObjectMapping: 0.027800 ms MarkObjects: 1.249500 ms  DeleteObjects: 0.017600 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000803 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.981 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1103 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 59.5 MB.
-System memory in use after: 59.6 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1564.
-Total: 3.403500 ms (FindLiveObjects: 0.241200 ms CreateObjectMapping: 0.032200 ms MarkObjects: 3.099700 ms  DeleteObjects: 0.027900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000739 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.58 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.954 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1103 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 59.9 MB.
-System memory in use after: 60.0 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1566.
-Total: 1.733900 ms (FindLiveObjects: 0.265400 ms CreateObjectMapping: 0.040000 ms MarkObjects: 1.412200 ms  DeleteObjects: 0.015000 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000501 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.841 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1103 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 59.9 MB.
-System memory in use after: 60.0 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1568.
-Total: 1.589200 ms (FindLiveObjects: 0.180200 ms CreateObjectMapping: 0.027700 ms MarkObjects: 1.363300 ms  DeleteObjects: 0.016700 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000516 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.857 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1103 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 59.7 MB.
-System memory in use after: 59.8 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1570.
-Total: 2.095700 ms (FindLiveObjects: 0.257200 ms CreateObjectMapping: 0.034400 ms MarkObjects: 1.783400 ms  DeleteObjects: 0.019500 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000753 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.949 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.45 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1103 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 60.0 MB.
-System memory in use after: 60.1 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1572.
-Total: 1.756900 ms (FindLiveObjects: 0.194200 ms CreateObjectMapping: 0.026000 ms MarkObjects: 1.519400 ms  DeleteObjects: 0.015300 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000632 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.759 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1103 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 59.5 MB.
-System memory in use after: 59.6 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1574.
-Total: 1.724100 ms (FindLiveObjects: 0.176900 ms CreateObjectMapping: 0.027700 ms MarkObjects: 1.503700 ms  DeleteObjects: 0.014200 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000824 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.743 seconds
+- Completed reload, in  0.706 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1103 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 59.9 MB.
-System memory in use after: 60.0 MB.
+System memory in use before: 76.4 MB.
+System memory in use after: 76.5 MB.
 
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1576.
-Total: 1.952600 ms (FindLiveObjects: 0.172200 ms CreateObjectMapping: 0.027200 ms MarkObjects: 1.728200 ms  DeleteObjects: 0.023100 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1605.
+Total: 1.981600 ms (FindLiveObjects: 0.196300 ms CreateObjectMapping: 0.029800 ms MarkObjects: 1.729900 ms  DeleteObjects: 0.024400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 112.023722 seconds.
+  path: Assets/FourEvilDragonsHP/Animators/TerrorbringerCTRL.controller
+  artifactKey: Guid(d44a18fbb4c18cb40b8732baf53d96fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Animators/TerrorbringerCTRL.controller using Guid(d44a18fbb4c18cb40b8732baf53d96fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e00e02f5b278c823a878df315b5ab0f') in 0.015633 seconds
+  Import took 0.017768 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.931628 seconds.
+  path: Assets/FourEvilDragonsHP/Mesh/DragonSoulEaterMesh.fbx
+  artifactKey: Guid(063e65bf9ea59ea44bb459f4b7490fd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Mesh/DragonSoulEaterMesh.fbx using Guid(063e65bf9ea59ea44bb459f4b7490fd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5405407bca17f5342876597ff136861a') in 0.066878 seconds
+  Import took 0.069325 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000206 seconds.
+  path: Assets/FourEvilDragonsHP/Mesh/DragonUsurperMesh.fbx
+  artifactKey: Guid(79b50b34e44b5fd4db1cdc9535a3c86b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Mesh/DragonUsurperMesh.fbx using Guid(79b50b34e44b5fd4db1cdc9535a3c86b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dcfd26601ec067b50d25b02566c5b7e6') in 0.024170 seconds
+  Import took 0.026455 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000200 seconds.
+  path: Assets/FourEvilDragonsHP/Mesh/DragonTheNightmareMesh.fbx
+  artifactKey: Guid(2f4e6492f506bbb4a8aeba850e3bb52f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Mesh/DragonTheNightmareMesh.fbx using Guid(2f4e6492f506bbb4a8aeba850e3bb52f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '514ad398fd73f0421d48122d79300f6b') in 0.022657 seconds
+  Import took 0.025012 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000224 seconds.
+  path: Assets/FourEvilDragonsHP/Mesh/Stage.fbx
+  artifactKey: Guid(2897399b8106c274f9e41904f19945b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Mesh/Stage.fbx using Guid(2897399b8106c274f9e41904f19945b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99be1f5a2687521e14e64fc532e98f39') in 0.011669 seconds
+  Import took 0.014036 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000294 seconds.
+  path: Assets/FourEvilDragonsHP/Mesh/DragonTerrorBringerMesh.fbx
+  artifactKey: Guid(3fa06637f7751b44b8e63a9964b181a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Mesh/DragonTerrorBringerMesh.fbx using Guid(3fa06637f7751b44b8e63a9964b181a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '901a70f3170f6c36223b6e95658ee031') in 0.021966 seconds
+  Import took 0.024439 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 36.071245 seconds.
+  path: Assets/FourEvilDragonsHP/Texture/DragonUsurper
+  artifactKey: Guid(02aa1ef24e8e46d49b320918a2be3278) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Texture/DragonUsurper using Guid(02aa1ef24e8e46d49b320918a2be3278) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a6b7f22c7d48794f31df5bedb37184f') in 0.003658 seconds
+  Import took 0.006010 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000386 seconds.
+  path: Assets/FourEvilDragonsHP/Texture/DragonUsurper
+  artifactKey: Guid(02aa1ef24e8e46d49b320918a2be3278) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Texture/DragonUsurper using Guid(02aa1ef24e8e46d49b320918a2be3278) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a6b7f22c7d48794f31df5bedb37184f') in 0.001591 seconds
+  Import took 0.003878 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.086913 seconds.
+  path: Assets/FourEvilDragonsHP/Texture/DragonTerrorBringer
+  artifactKey: Guid(a31e3a64dd9aa104d803723e365a760b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Texture/DragonTerrorBringer using Guid(a31e3a64dd9aa104d803723e365a760b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3077e38943a9963f6da845c204a76ab') in 0.001883 seconds
+  Import took 0.003963 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000836 seconds.
+  path: Assets/FourEvilDragonsHP/Texture/DragonTerrorBringer
+  artifactKey: Guid(a31e3a64dd9aa104d803723e365a760b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Texture/DragonTerrorBringer using Guid(a31e3a64dd9aa104d803723e365a760b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3077e38943a9963f6da845c204a76ab') in 0.002120 seconds
+  Import took 0.004522 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.513499 seconds.
+  path: Assets/FourEvilDragonsHP/Texture/DragonSoulEater
+  artifactKey: Guid(021d55eb71a00ef4e9457bc057db0744) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Texture/DragonSoulEater using Guid(021d55eb71a00ef4e9457bc057db0744) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c1c3d50349162c610454b1691d516cd') in 0.007484 seconds
+  Import took 0.009760 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.782715 seconds.
+  path: Assets/FourEvilDragonsHP/Texture/DragonUsurper/BlueHP.png
+  artifactKey: Guid(bd6a5ac65d3f73a48bdbc2102872fac0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Texture/DragonUsurper/BlueHP.png using Guid(bd6a5ac65d3f73a48bdbc2102872fac0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0c697ab861ed0ab74384deac87f09f4') in 0.017601 seconds
+  Import took 0.019989 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000190 seconds.
+  path: Assets/FourEvilDragonsHP/Texture/DragonUsurper/GreenHP.png
+  artifactKey: Guid(7a1f130c4e7de554bb8a7f12d6a06ff1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Texture/DragonUsurper/GreenHP.png using Guid(7a1f130c4e7de554bb8a7f12d6a06ff1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8f699d1c2da83d798b73ca4b68b7f0b') in 0.014209 seconds
+  Import took 0.016246 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000228 seconds.
+  path: Assets/FourEvilDragonsHP/Texture/DragonUsurper/RedHP.png
+  artifactKey: Guid(8afba6e8fe9a67344ab7cb4677d3da0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Texture/DragonUsurper/RedHP.png using Guid(8afba6e8fe9a67344ab7cb4677d3da0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21855b1254060be806d698277e0db7fa') in 0.014251 seconds
+  Import took 0.016613 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000265 seconds.
+  path: Assets/FourEvilDragonsHP/Texture/DragonUsurper/GreenHP.png
+  artifactKey: Guid(7a1f130c4e7de554bb8a7f12d6a06ff1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Texture/DragonUsurper/GreenHP.png using Guid(7a1f130c4e7de554bb8a7f12d6a06ff1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8f699d1c2da83d798b73ca4b68b7f0b') in 0.014410 seconds
+  Import took 0.016945 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000291 seconds.
+  path: Assets/FourEvilDragonsHP/Texture/DragonUsurper/PurpleHP.png
+  artifactKey: Guid(005cc54167f5bc347bda1b165320388f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FourEvilDragonsHP/Texture/DragonUsurper/PurpleHP.png using Guid(005cc54167f5bc347bda1b165320388f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a12c7f9a3477641f0f927f791be1a870') in 0.012626 seconds
+  Import took 0.014947 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000531 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.703 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1103 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 60.0 MB.
-System memory in use after: 60.1 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1578.
-Total: 1.463900 ms (FindLiveObjects: 0.156900 ms CreateObjectMapping: 0.026400 ms MarkObjects: 1.266400 ms  DeleteObjects: 0.012800 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000519 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.809 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1103 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 59.7 MB.
-System memory in use after: 59.8 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1580.
-Total: 1.683600 ms (FindLiveObjects: 0.250800 ms CreateObjectMapping: 0.040600 ms MarkObjects: 1.375500 ms  DeleteObjects: 0.015500 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000483 seconds.
+Registered in 0.000550 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
@@ -361,14 +1251,15 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.709 seconds
+- Completed reload, in  0.696 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1103 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 60.0 MB.
-System memory in use after: 60.1 MB.
+System memory in use before: 77.0 MB.
+System memory in use after: 77.1 MB.
 
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1582.
-Total: 1.927300 ms (FindLiveObjects: 0.171400 ms CreateObjectMapping: 0.029400 ms MarkObjects: 1.702900 ms  DeleteObjects: 0.022200 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1609.
+Total: 1.989700 ms (FindLiveObjects: 0.187600 ms CreateObjectMapping: 0.030700 ms MarkObjects: 1.748500 ms  DeleteObjects: 0.020800 ms)
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

@@ -109,7 +109,7 @@ Shader "Unlit/Shader1"
         Pass
         {
 
-           // Blend DstColor Zero // [src * dst + dst * 0]
+           // Blend DstColor Zero // [src    * dst + dst * 0]
            //  Blend One One
            // ZWrite Off
            // ZTest GEqual
